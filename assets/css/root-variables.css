@@ -1,0 +1,21 @@
+/* START root-variables */
+:root{
+    /* START colors */
+    --color-primary: #2E245E;
+    --color-secondary: #6B54DE;
+    --palette-gray-100: #333333;
+    --palette-gray-50: #828282;
+    --palette-gray-0: #F5F5F5;
+    --color-white: #FFFFFF;
+    /* END colors */
+
+    /* START font-size */
+    --font-size-title1: 26px;
+    --font-size-title2: 22px;
+    --font-size-title3: 18px;
+    --font-size-paragraph: 16px;
+    --font-size-small: 14px;
+    --font-size-caption: 12px;
+    /* END font-size*/
+}
+/* END root-variables */
