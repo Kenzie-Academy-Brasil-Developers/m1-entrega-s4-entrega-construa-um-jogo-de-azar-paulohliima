@@ -2,26 +2,24 @@
 :root{
     /* START caça-níqueis */
         /* START background & Details */
-        --primary-background-color: #001233;
-        --secondary-background-color: #001845;
-        --secondary-detail-color: #0466C8;
-        --primary-detail-color: #0353A4;
+        --primary-color-bg-slot-machine: #001233;
+        --secondary-color-bg-slot-machine: #001845;
+        --primary-color-detail-slot-machine: #0353A4;
+        --secondary-color-detail-slot-machine: #0466C8;
         /* END background & Details */
 
         /* START neon-box */
-        --primary-neon-color: #59E2FF;
-        --primary-neon-shadow: ;
-        --secondary-neon-shadow: ;
+        --box-shadow-neon: inset 0 0 30px #59e2ff, 0 0 30px #59e2ff;
         /* END neon-box */
     /* START caça-níqueis */
 
     /* START caça-palavra */
-    --font-size-title1: 26px;
-    --font-size-title2: 22px;
-    --font-size-title3: 18px;
-    --font-size-paragraph: 16px;
-    --font-size-small: 14px;
-    --font-size-caption: 12px;
+        /* START background & Details */
+        --primary-color-bg-word-seek: #FFE6A7;
+        --secondary-color-bg-word-seek: #BB9457;
+        --primary-color-detail-word-seek: #432818;
+        --secondary-color-detail-word-seek: #6F1D1B;
+        /* END background & Details */
     /* START caça-palavra */
 }
 /* END root-variables */

@@ -1,26 +1,60 @@
 /* START imports */
-@font-face {
-    font-family: "Fortnite";
-    src: url(/assets/fonts/font-fortnite.ttf);
-}
-@font-face {
-    font-family: "GameCube";
-    src: url(/assets/fonts/GameCube.ttf)
-}
+    @font-face {
+        font-family: "Fortnite";
+        src: url(/assets/fonts/font-fortnite.ttf);
+    }
 
-@import url(/assets/css/root-variables.css);
+    @font-face {
+        font-family: "GameCube";
+        src: url(/assets/fonts/GameCube.ttf)
+    }
+    @font-face {
+        font-family: "White Dream";
+        src: url(/assets/fonts/font-title-jackpot.otf);
+    }
+
+    @import url(./root-variables.css);
 /* END imports */
+
+/* START root-variables */
+:root{
+    /* START caça-níqueis */
+
+        
+
+        /* START background & Details */
+        --primary-color-bg-slot-machine: #001233;
+        --secondary-color-bg-slot-machine: #001845;
+        --primary-color-detail-slot-machine: #0353A4;
+        --secondary-color-detail-slot-machine: #0466C8;
+        /* END background & Details */
+
+        /* START neon-box */
+        --box-shadow-neon: inset 0 0 20px #59e2ff, 0 0 20px #59e2ff;
+        /* END neon-box */
+    /* START caça-níqueis */
+
+    /* START caça-palavra */
+        /* START background & Details */
+        --primary-color-bg-word-seek: #FFE6A7;
+        --secondary-color-bg-word-seek: #BB9457;
+        --primary-color-detail-word-seek: #432818;
+        --secondary-color-detail-word-seek: #6F1D1B;
+        /* END background & Details */
+    /* START caça-palavra */
+}
+/* END root-variables */
 
 /* START general */
    
         .flex{
             display: flex;
         }
+        
         .flex--col{
             display: flex;
             flex-direction: column;
         }
-        
 /* END general */
 
 /* START html */
@@ -61,61 +95,89 @@
 /* START main */
 
         .main{
-            background-color: #002855;
+            background-color: #fff;
         }
-        #title1{
+
+        .main__title{
             margin-top: 20px;
             text-align: center;
             font-size: 50px;
             font-family: "Fortnite", sans-serif;
             color: #979DAC;
         }
+        
         #title2{
             margin-right: 10px;
             font-size: 30px;
             font-family: "Fortnite", sans-serif;
             color: #979DAC;
         }
-
-        .main__switch{
-            justify-content: center;
-            align-items: center;
-            background-color: #2196F3;
-            width: 250px;
-            padding: 5px;
-            border: solid 1px darkblue;
+        #game2{
+            background-color: var(--primary-color-bg-slot-machine);
+            width: 100vw;
+            height: 80vh;
         }
-        .switch--button{}
+        .game2__title{
+            text-align: center;
+            color: white;
+            font-size: 40px;  
+            font-family: "White Dream", serif;
+            text-shadow: var(--box-shadow-neon);
 
-        .game2{}
-        .game2__div{
+        }
+        .game2__divMain{
             align-items: center;
             justify-content: center;
-            width: 500px;
-            height: 300px;
+            width: 75%;
+            height: 75%;
+            border: 5px solid #59e2ff;
+            box-shadow: var(--box-shadow-neon);
+            border-radius: 35%;
             margin: 0 auto;
-            border: 15px dotted red;
-            border-radius: 50px;
+        }
+        .game2__divMain--second{
+            align-items: center;
+            justify-content: center;
+            width: 85%;
+            height: 75%;
+            max-width: 615px;
+            max-height: 315px;
+            margin: 0 auto;
+            border: 18px dotted red;
+            border-radius: 35%;
         }
         .machine--background{
             align-items: center;
             justify-content: center;
-            width: 460px;
-            height: 230px;
-            border: 2px solid #59E2FF;
-            box-shadow: 0 0 30px #174F8C;
+            width: 90%;
+            height: 80%;
+            max-width: 600px;
+            max-height: 300px;
+            border: 5px solid #59e2ff;
+            box-shadow: var(--box-shadow-neon);
             border-radius: 80px;
         }
         .game--background--black{
             align-items: center;
-            justify-content: space-around;
-            width: 420px;
-            height: 220px;
+            justify-content: space-evenly;
+            width: 90%;
+            height: 95%;
         }
         .screen--box{
             align-items: center;
             height: 80%;
         }
+        .screen--box-mid{
+            justify-content: center;
+            width: 40%;
+            border-left: 3px solid #59e2ff;
+            border-right: 3px solid #59e2ff;
+        }
+
+        /* --- DIVISÃO DO MACHINE SLOT ---
+        background: linear-gradient(90deg, rgba(0,99,113,1) 49%, rgba(124,232,255,1) 50%, rgba(0,99,113,1) 51%);
+        */
+
         .img--background{
             background-image: url(/assets/img/wheel-edit.png);
             width: 120px;
@@ -129,7 +191,7 @@
         .footer__main{
             width: 100%;
             height: 50px;
-            background-color: #2196F3;
+            background-color: var(--secondary-background-color);
             color: white;
         }
         .footer--autor{}
@@ -140,6 +202,25 @@
 /* START extras */
     /* START switch */
         /* The switch - the box around the slider */
+        .main__switch{
+            background-color: var(--primary-color-bg-slot-machine);
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 10vh;
+            padding: 5px;
+            border: solid 1px darkblue;
+
+        }
+
+        .switch--title{
+            display: inline-block;
+            font-family: "Fortnite", sans-serif;
+            font-size: 20px;
+            color: white;
+            margin-right: 15px;
+        }
+        
         .switch--button {
             position: relative;
             display: inline-block;
@@ -219,9 +300,31 @@
 /* END extras */
 
 /* START media queries */
-          @media only screen and (orientation: landscape){
-              .header{
-                  display: none;
-              }
-          }
-[/* END media queries */
+    @media only screen and (orientation: landscape){
+        /* START general */
+            .hidden{
+                display: none;
+            }
+
+            .show{
+                display: block;
+            }
+        /* END general */
+        
+            .header{
+                display: none;
+            }
+
+            .main__title{
+                display: none;
+            }
+
+            #game2{
+                width: 100vw;
+                height: 100vh;
+            }
+            .footer__main{
+                display: none;
+            }
+        }
+/* END media queries */

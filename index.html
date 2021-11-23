@@ -17,43 +17,48 @@
     </header>
     
     <main class="main flex--col">
-            <h1 id="title1">Jogos de Azar</h1>
-        <div class="main__switch flex">
-            <span id="title2">Caça-Palavras</span>
+        <h1 class="main__title">Jogos de Azar</h1>
+
+        <div id="switch-game" class="main__switch flex">
+            <span id="game-title" class="switch--title">Caça-Palavras</span>
+
             <label class="switch--button">
                 <input type="checkbox">
                 <span class="slider round"></span>
             </label>     
         </div>   
 
-        <section id="game1">
+        <section id="game1" class="show">
             
         </section>
         
-        <section id="game2">
-            <div class="game2__div flex">
-                <div class="machine--background flex">
-                    <div class="game--background--black flex">
-                        <div class="screen--box flex">
-                            <div class="img--background">
-                                
+        <section id="game2" class="hidden">
+            <h2 class="game2__title">&#9734; JackPot &#9734;</h2>
+            <div class="game2__divMain flex">
+                <div class="game2__divMain--second flex">
+                    <div class="machine--background flex">
+                        <div class="game--background--black flex">
+                            <div class="screen--box flex">
+                                <div class="img--background">
+                                    
+                                </div>
                             </div>
-                         </div>
-                         
-                         <div class="screen--box flex">
-                            <div class="img--background">
+                            
+                            <div class="screen--box screen--box-mid flex">
+                                <div class="img--background">
 
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="screen--box flex">
-                            <div class="img--background">
+                            <div class="screen--box flex">
+                                <div class="img--background">
 
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+        </div>
         </section>
     </main>
     
@@ -62,6 +67,8 @@
         <span class="footer--madeIn"> &#169; Kenzie Academy Brasil - 2021</span> 
     </footer>
 
-    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/switch-button.js"></script>
+    <script src="./assets/js/word-seeker.js"></script>
+    <script src="./assets/js/slot-machine.js"></script>
 </body>
 </html>
