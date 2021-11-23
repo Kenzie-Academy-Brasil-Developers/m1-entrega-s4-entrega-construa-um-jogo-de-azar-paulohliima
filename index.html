@@ -9,24 +9,22 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <header>
-        <div>
-            <figure>
-                <img width="50px" height="50px" src="https://kenzie.com.br/images/logoblue.svg" alt="Cassino logotipo">
-                <figcaption>Games</figcaption>
-            </figure>
+    <header class="header flex">
+        <div class="header__main flex">
+            <img src="https://kenzie.com.br/images/logoblue.svg" alt="Cassino logotipo" class="header--logoImg">
+            <figcaption class="header--logoTitle">Games</figcaption>
         </div>
     </header>
     
-    <main>
-        <div>
-            <h1>Jogos de Azar</h1>
-        </div>
-
-        <label class="switch">
-            <input type="checkbox">
-            <span class="slider round"></span>
-        </label>        
+    <main class="main flex--col">
+            <h1 id="title1">Jogos de Azar</h1>
+        <div class="main__switch flex">
+            <span id="title2">Caça-Palavras</span>
+            <label class="switch--button">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>     
+        </div>   
 
         <section id="game1">
             
@@ -37,19 +35,19 @@
                 <div class="machine--background flex">
                     <div class="game--background--black flex">
                         <div class="screen--box flex">
-                            <div class="img--background--white">
+                            <div class="img--background">
                                 
                             </div>
                          </div>
                          
                          <div class="screen--box flex">
-                            <div class="img--background--white">
+                            <div class="img--background">
 
                             </div>
                         </div>
 
                         <div class="screen--box flex">
-                            <div class="img--background--white">
+                            <div class="img--background">
 
                             </div>
                         </div>
@@ -59,9 +57,9 @@
         </section>
     </main>
     
-    <footer>
-        <p>Feito por: <span id="leonardo">Leonardo Moraes</span>, <span id="luiz">Luiz Felipe Faria</span> e <span id="paulo">Paulo Lima</span></p>
-        <span> &#169; Kenzie Academy Brasil - 2021</span> 
+    <footer class="footer__main">
+        <p class="footer--autor">Feito por: <span id="leonardo">Leonardo Moraes</span>, <span id="luiz">Luiz Felipe Faria</span> e <span id="paulo">Paulo Lima</span></p>
+        <span class="footer--madeIn"> &#169; Kenzie Academy Brasil - 2021</span> 
     </footer>
 
     <script src="./assets/js/script.js"></script>
