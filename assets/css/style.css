@@ -9,11 +9,10 @@
 }
 
 @import url(/assets/css/root-variables.css);
-
 /* END imports */
 
 /* START general */
-
+   
         .flex{
             display: flex;
         }
@@ -25,6 +24,7 @@
 /* END general */
 
 /* START html */
+
 /* END html */
 
 /* START body */
@@ -60,17 +60,21 @@
 
 /* START main */
 
-        .main{}
+        .main{
+            background-color: #002855;
+        }
         #title1{
             margin-top: 20px;
             text-align: center;
             font-size: 50px;
             font-family: "Fortnite", sans-serif;
+            color: #979DAC;
         }
         #title2{
             margin-right: 10px;
             font-size: 30px;
             font-family: "Fortnite", sans-serif;
+            color: #979DAC;
         }
 
         .main__switch{
@@ -78,43 +82,45 @@
             align-items: center;
             background-color: #2196F3;
             width: 250px;
+            padding: 5px;
+            border: solid 1px darkblue;
         }
         .switch--button{}
 
-        /* .game2{}
+        .game2{}
         .game2__div{
             align-items: center;
             justify-content: center;
             width: 500px;
             height: 300px;
-            background-color: #ffb109;
             margin: 0 auto;
+            border: 15px dotted red;
+            border-radius: 50px;
         }
         .machine--background{
             align-items: center;
             justify-content: center;
             width: 460px;
-            height: 260px;
-            background-color: #dfc901;
+            height: 230px;
+            border: 2px solid #59E2FF;
+            box-shadow: 0 0 30px #174F8C;
+            border-radius: 80px;
         }
         .game--background--black{
             align-items: center;
             justify-content: space-around;
             width: 420px;
             height: 220px;
-            background-color: black;
         }
         .screen--box{
             align-items: center;
-            border: 2px solid white;
             height: 80%;
-            background-color: white;
         }
         .img--background{
             background-image: url(/assets/img/wheel-edit.png);
             width: 120px;
             height: 120px;
-        } */
+        }
 
 /* END main */
 
@@ -124,6 +130,7 @@
             width: 100%;
             height: 50px;
             background-color: #2196F3;
+            color: white;
         }
         .footer--autor{}
         .footer--madeIn{}
@@ -195,15 +202,15 @@
             border-radius: 50%;
         }
 
-        /* LIGTH ANIMATION */
+        /* LIGHT ANIMATION */
 
         /*
-            animation-name: example;
+            animation-name: light-animation;
             animation-duration: 0.2s;
             animation-iteration-count: infinite;
         */
 
-        @keyframes ligth-animation {
+        @keyframes light-animation {
             from {background-color: red;}
             to {background-color: yellow;}
           }
@@ -212,4 +219,9 @@
 /* END extras */
 
 /* START media queries */
-/* END media queries */
+          @media only screen and (orientation: landscape){
+              .header{
+                  display: none;
+              }
+          }
+[/* END media queries */
