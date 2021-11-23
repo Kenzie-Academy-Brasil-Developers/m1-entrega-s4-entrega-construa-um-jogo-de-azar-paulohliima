@@ -2,6 +2,15 @@
 /* END imports */
 
 /* START general */
+
+        .flex{
+            display: flex;
+        }
+        .flex--col{
+            display: flex;
+            flex-direction: column;
+        }
+        
 /* END general */
 
 /* START html */
@@ -15,6 +24,42 @@
 /* END header */
 
 /* START main */
+
+        .game2{}
+        .game2__div{
+            align-items: center;
+            justify-content: center;
+            width: 500px;
+            height: 300px;
+            background-color: #ffb109;
+            margin: 0 auto;
+        }
+        .machine--background{
+            align-items: center;
+            justify-content: center;
+            width: 460px;
+            height: 260px;
+            background-color: #dfc901;
+        }
+        .game--background--black{
+            align-items: center;
+            justify-content: space-around;
+            width: 420px;
+            height: 220px;
+            background-color: black;
+        }
+        .screen--box{
+            align-items: center;
+            border: 2px solid white;
+            height: 80%;
+            background-color: white;
+        }
+        .img--background--white{
+            background-image: url(/assets/img/wheel-edit.png);
+            width: 120px;
+            height: 120px;
+        }
+
 /* END main */
 
 /* START footer */
