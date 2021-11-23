@@ -1,21 +1,27 @@
 /* START root-variables */
 :root{
-    /* START colors */
-    --color-primary: #2E245E;
-    --color-secondary: #6B54DE;
-    --palette-gray-100: #333333;
-    --palette-gray-50: #828282;
-    --palette-gray-0: #F5F5F5;
-    --color-white: #FFFFFF;
-    /* END colors */
+    /* START caça-níqueis */
+        /* START background & Details */
+        --primary-background-color: #001233;
+        --secondary-background-color: #001845;
+        --secondary-detail-color: #0466C8;
+        --primary-detail-color: #0353A4;
+        /* END background & Details */
 
-    /* START font-size */
+        /* START neon-box */
+        --primary-neon-color: #59E2FF;
+        --primary-neon-shadow: ;
+        --secondary-neon-shadow: ;
+        /* END neon-box */
+    /* START caça-níqueis */
+
+    /* START caça-palavra */
     --font-size-title1: 26px;
     --font-size-title2: 22px;
     --font-size-title3: 18px;
     --font-size-paragraph: 16px;
     --font-size-small: 14px;
     --font-size-caption: 12px;
-    /* END font-size*/
+    /* START caça-palavra */
 }
 /* END root-variables */
