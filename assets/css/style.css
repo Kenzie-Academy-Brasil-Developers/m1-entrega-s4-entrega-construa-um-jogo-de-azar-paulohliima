@@ -468,10 +468,6 @@
                 display: none;
             }
         }
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
         @media (max-width: 400px){
             #puzzle--title{
                 padding: 20px 0 0 0;
@@ -513,8 +509,4 @@
                 background-image: url(/assets/img/wood.jpg);
             }
         }
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 /* END media queries */
