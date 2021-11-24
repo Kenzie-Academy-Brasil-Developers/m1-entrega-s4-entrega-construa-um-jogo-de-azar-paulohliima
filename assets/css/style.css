@@ -127,8 +127,8 @@
             position: relative;
             align-items: center;
             justify-content: center;
-            width: 75%;
-            height: 75%;
+            width: 482px;
+            height: 260px;
             border: 5px solid #59e2ff;
             box-shadow: var(--primary-box-shadow-neon);
             border-radius: 35%;
@@ -137,10 +137,8 @@
         .game2__divMain--second{
             align-items: center;
             justify-content: center;
-            width: 85%;
-            height: 75%;
-            max-width: 615px;
-            max-height: 315px;
+            width: 420px;
+            height: 205px;
             margin: 0 auto;
             border: 18px dotted red;
             border-radius: 35%;
@@ -148,10 +146,8 @@
         .machine--background{
             align-items: center;
             justify-content: center;
-            width: 90%;
-            height: 80%;
-            max-width: 600px;
-            max-height: 300px;
+            width: 394px;
+            height: 164px;
             border: 5px solid #59e2ff;
             box-shadow: var(--primary-box-shadow-neon);
             border-radius: 80px;
@@ -159,17 +155,18 @@
         .game--background--black{
             align-items: center;
             justify-content: space-evenly;
-            width: 90%;
+            width: 95%;
             height: 95%;
         }
         .screen--box{
+            width: 90px;
             align-items: center;
-            height: 80%;
+            height: 140px;
         }
 
         .screen--box-mid{
             justify-content: center;
-            width: 40%;
+            width: 126px;
             border-left: 3px solid #59e2ff;
             border-right: 3px solid #59e2ff;
         }
@@ -227,9 +224,21 @@
         */
 
         .img--background{
+<<<<<<< HEAD
             background-image: url(/assets/img/wheel-edit.png);
             width: 120px;
             height: 120px;
+=======
+            justify-content: center;
+            align-items: center;
+            width: 85px;
+            height: 85px;
+        }
+
+        .div--box--img{
+            width: 100%;
+            height: 100%;
+>>>>>>> 91c038fb13361ef15a9df256e5b190a6f524fd00
         }
 
 /* END main */
@@ -254,9 +263,8 @@
             background-color: var(--primary-color-bg-slot-machine);
             justify-content: center;
             align-items: center;
-            width: 100vw;
             height: 10vh;
-            padding: 5px;
+            padding: 5px 0;
             border: solid 1px darkblue;
 
         }
