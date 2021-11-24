@@ -14,6 +14,16 @@
         src: url(/assets/fonts/font-title-jackpot.otf);
     }
 
+    @font-face {
+        font-family: "Cormorant Garamond, bold";
+        src: url(../fonts/CormorantGaramond-Bold.ttf);
+    }
+
+    @font-face {
+        font-family: "Architects Daughter";
+        src: url(../fonts/ArchitectsDaughter-Regular.ttf);
+    }
+
     @import url(./root-variables.css);
 /* END imports */
 
@@ -89,6 +99,77 @@
 /* END header */
 
 /* START main */
+
+        #game1{
+            width: 100%;
+        }
+
+        .puzzle--box{
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        .game1__div{
+            padding: 0 5px 0 5px;
+            background-image: url(../img/paper.jpg);
+            height: 400px;
+        }
+
+        #game--title{
+            font-size: 26px;
+            font-family: "Cormorant Garamond, bold", serif;
+            text-align: center;
+            font-weight: 900;
+            border-bottom: 1px solid black;
+            padding: 10px 0 5px 0;
+        }
+
+        #game--date{
+            text-align: center;
+            font-size: 11px;
+            border-top: 1px solid black;
+            margin-top: 1px;
+            padding-top: 5px;
+        }
+
+        #puzzle--title{
+            font-size: 18px;
+            font-family: "Architects Daughter";
+            text-transform: uppercase;
+            padding: 20px 0 0 42px;
+            margin-bottom: 3px;
+        }
+
+        #puzzle{
+            width: 250px;
+            height: 250px;
+            background-color: transparent;
+            border: 3px solid black;
+            
+        }
+
+        #words--list{
+            background-color: transparent;
+            border: 3px solid black;
+            width: 200px;
+            height: 250px;
+        }
+
+        #icon--button{
+            width: 50px;
+            float: inline-end;
+        }
+
+        #icon--img{
+            width: 50px;
+        }
+
+    /* footer{
+        background-image: url(../img/paper.jpg);
+        font-size: var(--font-size-small);
+    } */
+
+
 
         .main{
             background-color: #fff;
@@ -388,4 +469,32 @@
                 display: none;
             }
         }
+
+        @media (max-width: 400px){
+            #puzzle--title{
+                padding: 20px 0 0 0;
+            }
+        }
+        
+        @media (min-width: 640px){
+        
+            #game1{
+                width: 100%;
+                background-image: url(../img/wood.jpg);
+                display: flex;
+                justify-content: center;
+                padding: 70px 0 70px 0;
+            }
+        
+            .game1__div{
+                width: 640px;
+                height: 400px;
+                background-image: url(../img/paper.jpg);
+            }
+        
+            footer{
+                background-image: url(/assets/img/wood.jpg);
+            }
+        }
+        
 /* END media queries */
