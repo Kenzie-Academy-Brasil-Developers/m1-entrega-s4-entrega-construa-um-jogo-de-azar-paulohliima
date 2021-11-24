@@ -17,5 +17,9 @@
     --font-size-small: 14px;
     --font-size-caption: 12px;
     /* END font-size*/
+    --primary-color-bg-word-seek: #FFE6A7;
+    --secondary-color-bg-word-seek: #BB9457;
+    --primary-color-detail-word-seek: #432818;
+    --secondary-color-detail-word-seek: #6F1D1B;
 }
 /* END root-variables */
