@@ -164,11 +164,6 @@
             width: 50px;
         }
 
-    /* footer{
-        background-image: url(../img/paper.jpg);
-        font-size: var(--font-size-small);
-    } */
-
 
 
         .main{
@@ -478,12 +473,27 @@
         
         @media (min-width: 640px){
         
-            #game1{
-                width: 100%;
+            .show{
+                display: flex;
+                justify-content: center;
+                background-image: url(../img/floor\ .jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            
+            .game--table{
+                width: 1000px;
+                height: 400px;
                 background-image: url(../img/wood.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
                 display: flex;
                 justify-content: center;
                 padding: 70px 0 70px 0;
+                margin: 50px 0 50px 0;
+                border-radius: 20px;
             }
         
             .game1__div{
