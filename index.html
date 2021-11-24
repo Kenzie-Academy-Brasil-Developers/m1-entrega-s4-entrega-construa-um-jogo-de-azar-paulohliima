@@ -9,26 +9,27 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <header>
-        <div>
-            <figure>
-                <img width="50px" height="50px" src="https://kenzie.com.br/images/logoblue.svg" alt="Cassino logotipo">
-                <figcaption>Games</figcaption>
-            </figure>
+    <header class="header flex">
+        <div class="header__main flex">
+            <img src="https://kenzie.com.br/images/logoblue.svg" alt="Cassino logotipo" class="header--logoImg">
+            <figcaption class="header--logoTitle">Games</figcaption>
         </div>
     </header>
     
-    <main>
-        <div>
-            <h1>Jogos de Azar</h1>
-        </div>
+    <main class="main flex--col">
+        <h1 class="main__title">Jogos de Azar</h1>
 
-        <label class="switch">
-            <input type="checkbox">
-            <span class="slider round"></span>
-        </label>        
+        <div id="switch-game" class="main__switch flex">
+            <span id="game-title" class="switch--title">Caça-Palavras</span>
 
-        <section id="game1">
+            <label class="switch--button">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>     
+        </div>   
+
+        <section id="game1" class="show">
+            
             <div class="game1__div flex--col">
                 <h1 id="game--title">Kenzie Games</h1>
                 <span id="game--date">25 de Novembro de 2021</span>
@@ -42,40 +43,52 @@
                 </div> 
                 
             </div>
+            
         </section>
         
-        <section id="game2">
-            <div class="game2__div flex">
-                <div class="machine--background flex">
-                    <div class="game--background--black flex">
-                        <div class="screen--box flex">
-                            <div class="img--background--white">
-                                
+        <section id="game2" class="hidden">
+            <h2 class="game2__title">&#9734; JackPot &#9734;</h2>
+            <div class="game2__divMain flex">
+                <div class="game2__divMain--second flex">
+                    <div class="machine--background flex">
+                        <div class="game--background--black flex">
+                            <div class="screen--box flex">
+                                <div class="img--background">
+                                    
+                                </div>
                             </div>
-                         </div>
-                         
-                         <div class="screen--box flex">
-                            <div class="img--background--white">
+                            
+                            <div class="screen--box screen--box-mid flex">
+                                <div class="img--background">
 
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="screen--box flex">
-                            <div class="img--background--white">
+                            <div class="screen--box flex">
+                                <div class="img--background">
 
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
+                
+                <div class="machine--coupling">
+                    <span class="machine--lever-rod">
+                        <button id="slot-roll" class="machine--lever-grab" type="button">Roll me!</button>
+                    </span>
                 </div>
             </div>
         </section>
     </main>
     
-    <footer>
-        <p>Feito por: <span id="leonardo">Leonardo Moraes</span>, <span id="luiz">Luiz Felipe Faria</span> e <span id="paulo">Paulo Lima</span></p>
-        <span> &#169; Kenzie Academy Brasil - 2021</span> 
+    <footer class="footer__main">
+        <p class="footer--autor">Feito por: <span id="leonardo">Leonardo Moraes</span>, <span id="luiz">Luiz Felipe Faria</span> e <span id="paulo">Paulo Lima</span></p>
+        <span class="footer--madeIn"> &#169; Kenzie Academy Brasil - 2021</span> 
     </footer>
 
-    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/switch-button.js"></script>
+    <script src="./assets/js/word-seeker.js"></script>
+    <script src="./assets/js/slot-machine.js"></script>
 </body>
 </html>
