@@ -106,7 +106,7 @@
         .game1__div{
             padding: 0 5px 0 5px;
             background-image: url(../img/paper.jpg);
-            height: 400px;
+            height: 100vh;
         }
 
         #game--title{
@@ -121,7 +121,7 @@
         #game--date{
             text-align: center;
             font-size: 11px;
-            border-top: 1px solid black;
+            border-top: 4px double black;
             margin-top: 1px;
             padding-top: 5px;
         }
@@ -193,7 +193,7 @@
             font-size: 40px;  
             font-family: "White Dream", serif;
             text-shadow: var(--box-shadow-neon);
-
+            margin-top: 8px;
         }
         .game2__divMain{
             position: relative;
@@ -306,10 +306,6 @@
         .div--box--img{
             width: 100%;
             height: 100%;
-<<<<<<< HEAD
-=======
-
->>>>>>> be19839d2aec3539d08bd175c04553449fc05511
         }
 
 /* END main */
@@ -474,6 +470,9 @@
             .show{
                 display: block;
             }
+            #game--title{
+                display: none;
+            }
         /* END general */
         
             .header{
@@ -492,15 +491,13 @@
                 display: none;
             }
         }
-/* <<<<<<< branch-luiz */
-
         @media (max-width: 400px){
             #puzzle--title{
                 padding: 20px 0 0 0;
             }
         }
         
-        @media (min-width: 640px){
+        @media (min-width: 641px){
         
             .show{
                 display: flex;
@@ -535,7 +532,5 @@
                 background-image: url(/assets/img/wood.jpg);
             }
         }
-        
 
-/* >>>>>>> main */
 /* END media queries */
