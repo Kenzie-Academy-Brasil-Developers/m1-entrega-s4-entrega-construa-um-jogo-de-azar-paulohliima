@@ -8,6 +8,7 @@
         font-family: "GameCube";
         src: url(/assets/fonts/GameCube.ttf)
     }
+
     @font-face {
         font-family: "White Dream";
         src: url(/assets/fonts/font-title-jackpot.otf);
@@ -17,36 +18,33 @@
 /* END imports */
 
 /* START root-variables */
-:root{
-    /* START caça-níqueis */
+    :root{
+        /* START caça-palavra */
+            /* START background & Details */
+            --primary-color-bg-word-seek: #FFE6A7;
+            --secondary-color-bg-word-seek: #BB9457;
+            --primary-color-detail-word-seek: #432818;
+            --secondary-color-detail-word-seek: #6F1D1B;
+            /* END background & Details */
+        /* START caça-palavra */
 
-        
+        /* START caça-níqueis */
+            /* START background & Details */
+            --primary-color-bg-slot-machine: #001233;
+            --secondary-color-bg-slot-machine: #001845;
+            --primary-color-detail-slot-machine: #0353A4;
+            --secondary-color-detail-slot-machine: #0466C8;
+            /* END background & Details */
 
-        /* START background & Details */
-        --primary-color-bg-slot-machine: #001233;
-        --secondary-color-bg-slot-machine: #001845;
-        --primary-color-detail-slot-machine: #0353A4;
-        --secondary-color-detail-slot-machine: #0466C8;
-        /* END background & Details */
-
-        /* START neon-box */
-        --box-shadow-neon: inset 0 0 20px #59e2ff, 0 0 20px #59e2ff;
-        /* END neon-box */
-    /* START caça-níqueis */
-
-    /* START caça-palavra */
-        /* START background & Details */
-        --primary-color-bg-word-seek: #FFE6A7;
-        --secondary-color-bg-word-seek: #BB9457;
-        --primary-color-detail-word-seek: #432818;
-        --secondary-color-detail-word-seek: #6F1D1B;
-        /* END background & Details */
-    /* START caça-palavra */
-}
+            /* START neon-box */
+            --primary-box-shadow-neon: inset 0 0 20px #59e2ff, 0 0 20px #59e2ff;
+            --secondary-box-shadow-neon: inset 0 0 20px red, 0 0 20px red;
+            /* END neon-box */
+        /* START caça-níqueis */
+    }
 /* END root-variables */
 
 /* START general */
-   
         .flex{
             display: flex;
         }
@@ -58,11 +56,9 @@
 /* END general */
 
 /* START html */
-
 /* END html */
 
 /* START body */
-
 /* END body */
 
 /* START header */
@@ -106,6 +102,8 @@
             color: #979DAC;
         }
         
+
+
         #title2{
             margin-right: 10px;
             font-size: 30px;
@@ -126,12 +124,13 @@
 
         }
         .game2__divMain{
+            position: relative;
             align-items: center;
             justify-content: center;
             width: 75%;
             height: 75%;
             border: 5px solid #59e2ff;
-            box-shadow: var(--box-shadow-neon);
+            box-shadow: var(--primary-box-shadow-neon);
             border-radius: 35%;
             margin: 0 auto;
         }
@@ -154,7 +153,7 @@
             max-width: 600px;
             max-height: 300px;
             border: 5px solid #59e2ff;
-            box-shadow: var(--box-shadow-neon);
+            box-shadow: var(--primary-box-shadow-neon);
             border-radius: 80px;
         }
         .game--background--black{
@@ -167,11 +166,59 @@
             align-items: center;
             height: 80%;
         }
+
         .screen--box-mid{
             justify-content: center;
             width: 40%;
             border-left: 3px solid #59e2ff;
             border-right: 3px solid #59e2ff;
+        }
+
+        .machine--coupling{
+            position: absolute;
+            transform: translate(275px,0);
+            border: 5px solid #59e2ff;
+            border-radius: 10%;
+            box-shadow: var(--primary-box-shadow-neon);
+            width: 60px;
+            height: 70px;
+        }
+
+        .machine--lever-rod{
+            position: absolute;
+            transform: translate(55px,-100px) rotate(0.1turn);
+            border: 5px solid #59e2ff;
+            border-radius: 30px;
+            box-shadow: var(--primary-box-shadow-neon);
+            width: 25px;
+            height: 150px;
+        }
+
+        .machine--lever-rod:hover{
+            animation-name: lever-animation;
+            animation-duration: 1s;
+            animation-delay: 0.25s;
+            animation-iteration-count: 2;
+            animation-direction: alternate;
+        }
+
+        .machine--lever-grab{
+            position: absolute;
+            transform: translate(-27px,-50px);
+            font-family: "White Dream", serif;
+            font-weight: 700;
+            text-shadow:  0 0 15px red, 0 0 20px red, 0 0 30px red, 0 0 40px red, 0 0 55px red, 0 0 75px red;
+            background: var(--primary-color-bg-slot-machine);
+            color: red;
+            border: 5px solid red;
+            border-radius: 100%;
+            box-shadow: var(--secondary-box-shadow-neon);
+            width: 80px;
+            height: 80px;
+        }
+
+        .machine--lever-grab:hover{
+            box-shadow: inset 0 0 20px red, 0 0 40px red, 0 0 55px red, 0 0 75px red;
         }
 
         /* --- DIVISÃO DO MACHINE SLOT ---
@@ -296,6 +343,20 @@
             to {background-color: yellow;}
           }
 
+        /* LEVER ANIMATION */
+        @keyframes lever-animation {
+            0% {transform: translate(55px,-100px) rotate(0.1turn);}
+            10% {transform: translate(57.5px,-90px) rotate(0.13turn);}
+            20% {transform: translate(60px,-80px) rotate(0.16turn);}
+            30% {transform: translate(62.5px,-70px) rotate(0.19turn);}
+            40% {transform: translate(75px,-60px) rotate(0.22turn);}
+            50% {transform: translate(80px,-40px) rotate(0.25turn);}
+            60% {transform: translate(75px,-40px) rotate(0.28turn);}
+            70% {transform: translate(70px,-30px)  rotate(0.31turn);}
+            80% {transform: translate(65px,-20px) rotate(0.34turn);}
+            90% {transform: translate(60px,-10px) rotate(0.37turn);}
+            100% {transform: translate(55px, 0px) rotate(0.4turn);}
+        }
     /* END switch */
 /* END extras */
 
