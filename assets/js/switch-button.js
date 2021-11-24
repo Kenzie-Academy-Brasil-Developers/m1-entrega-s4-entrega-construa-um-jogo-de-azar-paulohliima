@@ -4,7 +4,6 @@
             //Variables
             const wordSeeker = document.getElementById('game1');
             const slotMachine = document.getElementById('game2');
-            console.log(slotMachine.classList.length)
 
             //Classes-toggle
             wordSeeker.classList.toggle('hidden');

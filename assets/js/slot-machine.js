@@ -23,28 +23,43 @@ const conditionWin = (img1, img2, img3) =>{
         console.log("Tente Novamente!")
     }
 }
-// const imgAnimation = () =>{
-//     img1Variable = Aleatorio();
-//     img1.src=`./assets/img/game02/img${img1Variable}.png`
-//     img2Variable = Aleatorio();
-//     img2.src=`./assets/img/game02/img${img2Variable}.png`
-//     img3Variable = Aleatorio();
-//     img3.src=`./assets/img/game02/img${img3Variable}.png`
-// }
+const nextImg = () =>{
+    let img1Variable;
+    let img2Variable;
+    let img3Variable;
+    img1Variable = Aleatorio();
+    img1.src=`./assets/img/game02/img${img1Variable}.png`;
+    img2Variable = Aleatorio();
+    img2.src=`./assets/img/game02/img${img2Variable}.png`;
+    img3Variable = Aleatorio();
+    img3.src=`./assets/img/game02/img${img3Variable}.png`;
+}
+
+const imgAnimation = () =>{
+    buttonGame02.removeEventListener("click", imgAnimation);
+    let interval = setInterval(() => {
+        nextImg();
+    },100)
+    setTimeout(() => {
+        adding()
+        clearInterval(interval)}, 6000);
+}
+
 const adding = (e) =>{
+    // imgAnimation();
     let img1Variable;
     let img2Variable;
     let img3Variable;
 
-    console.log(e.target)
     img1Variable = Aleatorio();
-    img1.src=`./assets/img/game02/img${img1Variable}.png`
+    img1.src=`./assets/img/game02/img${img1Variable}.png`;
     img2Variable = Aleatorio();
-    img2.src=`./assets/img/game02/img${img2Variable}.png`
+    img2.src=`./assets/img/game02/img${img2Variable}.png`;
     img3Variable = Aleatorio();
-    img3.src=`./assets/img/game02/img${img3Variable}.png`
+    img3.src=`./assets/img/game02/img${img3Variable}.png`;
 
     conditionWin(img1Variable, img2Variable, img3Variable)
+    buttonGame02.addEventListener("click", imgAnimation);
 }
 
 //END dynamic-content-main
@@ -53,7 +68,7 @@ const adding = (e) =>{
 //END call-functions
 
 //START event-listeners
-buttonGame02.addEventListener("click", adding);
+buttonGame02.addEventListener("click", imgAnimation);
 //END event-listeners
 
 

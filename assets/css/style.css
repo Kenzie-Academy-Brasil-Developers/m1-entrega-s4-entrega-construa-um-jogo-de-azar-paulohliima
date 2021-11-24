@@ -53,6 +53,9 @@
             display: flex;
             flex-direction: column;
         }
+        body{
+            overflow-x: hidden;
+        }
 /* END general */
 
 /* START html */
@@ -62,6 +65,7 @@
 /* END body */
 
 /* START header */
+
         .header{
             width: 100%;
             height: 80px;
@@ -69,24 +73,22 @@
             align-items: center;
             justify-content: center;
         }
-
         .header__main{
             justify-content: center;
             align-items: center;
         }
-
         .header--logoImg{
             width: 60px;
             height: 60px;   
         }
-
         .header--logoTitle{
             margin-left: 8px;
             font-size: 24px;
             text-transform: uppercase;
             color: white;
             font-family: "GameCube", sans-serif;
-        }   
+        }
+        
 /* END header */
 
 /* START main */
@@ -102,7 +104,69 @@
             color: #979DAC;
         }
         
+        #game1{
+            width: 100%;
+        }
 
+        .puzzle--box{
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        .game1__div{
+            padding: 0 5px 0 5px;
+            background-image: url(../img/paper.jpg);
+            height: 100vh;
+        }
+
+        #game--title{
+            font-size: 26px;
+            font-family: "Cormorant Garamond, bold", serif;
+            text-align: center;
+            font-weight: 900;
+            border-bottom: 1px solid black;
+            padding: 10px 0 5px 0;
+        }
+
+        #game--date{
+            text-align: center;
+            font-size: 11px;
+            border-top: 4px double black;
+            margin-top: 1px;
+            padding-top: 5px;
+        }
+
+        #puzzle--title{
+            font-size: 18px;
+            font-family: "Architects Daughter";
+            text-transform: uppercase;
+            padding: 20px 0 0 42px;
+            margin-bottom: 3px;
+        }
+
+        #puzzle{
+            width: 250px;
+            height: 250px;
+            background-color: transparent;
+            border: 3px solid black;
+            
+        }
+
+        #words--list{
+            background-color: transparent;
+            border: 3px solid black;
+            width: 200px;
+            height: 250px;
+        }
+
+        #icon--button{
+            width: 50px;
+            float: inline-end;
+        }
+
+        #icon--img{
+            width: 50px;
+        }
 
         #title2{
             margin-right: 10px;
@@ -110,19 +174,22 @@
             font-family: "Fortnite", sans-serif;
             color: #979DAC;
         }
+
         #game2{
             background-color: var(--primary-color-bg-slot-machine);
             width: 100vw;
             height: 80vh;
         }
+
         .game2__title{
             text-align: center;
             color: white;
             font-size: 40px;  
             font-family: "White Dream", serif;
             text-shadow: var(--box-shadow-neon);
-
+            margin-top: 8px;
         }
+
         .game2__divMain{
             position: relative;
             align-items: center;
@@ -133,7 +200,9 @@
             box-shadow: var(--primary-box-shadow-neon);
             border-radius: 35%;
             margin: 0 auto;
+            margin-top: 15px;
         }
+
         .game2__divMain--second{
             align-items: center;
             justify-content: center;
@@ -143,6 +212,7 @@
             border: 18px dotted red;
             border-radius: 35%;
         }
+
         .machine--background{
             align-items: center;
             justify-content: center;
@@ -152,12 +222,14 @@
             box-shadow: var(--primary-box-shadow-neon);
             border-radius: 80px;
         }
+
         .game--background--black{
             align-items: center;
             justify-content: space-evenly;
             width: 95%;
             height: 95%;
         }
+        
         .screen--box{
             width: 90px;
             align-items: center;
@@ -238,6 +310,7 @@
 /* END main */
 
 /* START footer */
+
         .footer__main{
             width: 100%;
             height: 50px;
@@ -248,10 +321,12 @@
         .footer--autor{}
 
         .footer--madeIn{}
+
 /* END footer */
 
 /* START extras */
     /* START switch */
+        /* The switch - the box around the slider */
         .main__switch{
             background-color: var(--primary-color-bg-slot-machine);
             justify-content: center;
@@ -277,12 +352,14 @@
             height: 34px;
         }
         
+        /* Hide default HTML checkbox */
         .switch--button input {
             opacity: 0;
             width: 0;
             height: 0;
         }
         
+        /* The slider */
         .slider {
             position: absolute;
             cursor: pointer;
@@ -321,6 +398,7 @@
             transform: translateX(26px);
         }
         
+        /* Rounded sliders */
         .slider.round {
             border-radius: 34px;
         }
@@ -328,7 +406,7 @@
         .slider.round:before {
             border-radius: 50%;
         }
-    /* END switch */
+
         /* LIGHT ANIMATION */
 
         /*
@@ -356,6 +434,7 @@
             90% {transform: translate(15px,-125px) rotateX(0.37turn);}
             100% {transform: translate(15px,-125px) rotateX(0.4turn);}
         }
+    /* END switch */
 /* END extras */
 
 /* START media queries */
@@ -367,6 +446,9 @@
 
             .show{
                 display: block;
+            }
+            #game--title{
+                display: none;
             }
         /* END general */
         
@@ -385,5 +467,46 @@
             .footer__main{
                 display: none;
             }
-    }
+        }
+        @media (max-width: 400px){
+            #puzzle--title{
+                padding: 20px 0 0 0;
+            }
+        }
+        
+        @media (min-width: 641px){
+        
+            .show{
+                display: flex;
+                justify-content: center;
+                background-image: url(../img/floor\ .jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            
+            .game--table{
+                width: 1000px;
+                height: 400px;
+                background-image: url(../img/wood.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: flex;
+                justify-content: center;
+                padding: 70px 0 70px 0;
+                margin: 50px 0 50px 0;
+                border-radius: 20px;
+            }
+        
+            .game1__div{
+                width: 640px;
+                height: 400px;
+                background-image: url(../img/paper.jpg);
+            }
+        
+            footer{
+                background-image: url(/assets/img/wood.jpg);
+            }
+        }
 /* END media queries */
