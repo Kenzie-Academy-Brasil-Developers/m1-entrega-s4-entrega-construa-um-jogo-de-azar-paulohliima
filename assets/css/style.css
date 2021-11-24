@@ -62,7 +62,6 @@
 /* END body */
 
 /* START header */
-
         .header{
             width: 100%;
             height: 80px;
@@ -70,26 +69,27 @@
             align-items: center;
             justify-content: center;
         }
+
         .header__main{
             justify-content: center;
             align-items: center;
         }
+
         .header--logoImg{
             width: 60px;
             height: 60px;   
         }
+
         .header--logoTitle{
             margin-left: 8px;
             font-size: 24px;
             text-transform: uppercase;
             color: white;
             font-family: "GameCube", sans-serif;
-        }
-        
+        }   
 /* END header */
 
 /* START main */
-
         .main{
             background-color: #fff;
         }
@@ -238,21 +238,20 @@
 /* END main */
 
 /* START footer */
-
         .footer__main{
             width: 100%;
             height: 50px;
             background-color: var(--secondary-background-color);
             color: white;
         }
-        .footer--autor{}
-        .footer--madeIn{}
 
+        .footer--autor{}
+
+        .footer--madeIn{}
 /* END footer */
 
 /* START extras */
     /* START switch */
-        /* The switch - the box around the slider */
         .main__switch{
             background-color: var(--primary-color-bg-slot-machine);
             justify-content: center;
@@ -278,14 +277,12 @@
             height: 34px;
         }
         
-        /* Hide default HTML checkbox */
         .switch--button input {
             opacity: 0;
             width: 0;
             height: 0;
         }
         
-        /* The slider */
         .slider {
             position: absolute;
             cursor: pointer;
@@ -324,7 +321,6 @@
             transform: translateX(26px);
         }
         
-        /* Rounded sliders */
         .slider.round {
             border-radius: 34px;
         }
@@ -332,7 +328,7 @@
         .slider.round:before {
             border-radius: 50%;
         }
-
+    /* END switch */
         /* LIGHT ANIMATION */
 
         /*
@@ -360,31 +356,6 @@
             90% {transform: translate(15px,-125px) rotateX(0.37turn);}
             100% {transform: translate(15px,-125px) rotateX(0.4turn);}
         }
-
-        /* 0% {transform: translate(55px,-100px) rotate(0.1turn);}
-        10% {transform: translate(60px,-90px) rotate(0.13turn);}
-        20% {transform: translate(65px,-80px) rotate(0.16turn);}
-        30% {transform: translate(70px,-70px) rotate(0.19turn);}
-        40% {transform: translate(75px,-60px) rotate(0.22turn);}
-        50% {transform: translate(80px,-40px) rotate(0.25turn);}
-        60% {transform: translate(75px,-40px) rotate(0.28turn);}
-        70% {transform: translate(70px,-30px)  rotate(0.31turn);}
-        80% {transform: translate(65px,-20px) rotate(0.34turn);}
-        90% {transform: translate(60px,-10px) rotate(0.37turn);}
-        100% {transform: translate(55px, 0px) rotate(0.4turn);} */
-
-          /* translate(55px,-100px)
-          translate(65px,-90px)
-          translate(75px,-80px)
-          translate(85px,-70px)
-          translate(95px,-60px)
-          translate(95px,-50px)
-          translate(95px,-40px)
-          translate(105px,-30px) 
-          translate(115px,-20px)
-          translate(125px,-10px)
-          translate(135px,0px) */
-    /* END switch */
 /* END extras */
 
 /* START media queries */
@@ -414,5 +385,5 @@
             .footer__main{
                 display: none;
             }
-        }
+    }
 /* END media queries */
