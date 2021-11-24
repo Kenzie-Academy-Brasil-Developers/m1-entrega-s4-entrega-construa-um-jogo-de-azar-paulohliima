@@ -14,16 +14,6 @@
         src: url(/assets/fonts/font-title-jackpot.otf);
     }
 
-    @font-face {
-        font-family: "Cormorant Garamond, bold";
-        src: url(../fonts/CormorantGaramond-Bold.ttf);
-    }
-
-    @font-face {
-        font-family: "Architects Daughter";
-        src: url(../fonts/ArchitectsDaughter-Regular.ttf);
-    }
-
     @import url(./root-variables.css);
 /* END imports */
 
@@ -100,6 +90,7 @@
 
 /* START main */
 
+/* <<<<<<< branch-luiz */
         #game1{
             width: 100%;
         }
@@ -166,6 +157,8 @@
 
 
 
+/* ======= */
+/* >>>>>>> main */
         .main{
             background-color: #fff;
         }
@@ -203,8 +196,8 @@
             position: relative;
             align-items: center;
             justify-content: center;
-            width: 75%;
-            height: 75%;
+            width: 482px;
+            height: 260px;
             border: 5px solid #59e2ff;
             box-shadow: var(--primary-box-shadow-neon);
             border-radius: 35%;
@@ -213,10 +206,8 @@
         .game2__divMain--second{
             align-items: center;
             justify-content: center;
-            width: 85%;
-            height: 75%;
-            max-width: 615px;
-            max-height: 315px;
+            width: 420px;
+            height: 205px;
             margin: 0 auto;
             border: 18px dotted red;
             border-radius: 35%;
@@ -224,10 +215,8 @@
         .machine--background{
             align-items: center;
             justify-content: center;
-            width: 90%;
-            height: 80%;
-            max-width: 600px;
-            max-height: 300px;
+            width: 394px;
+            height: 164px;
             border: 5px solid #59e2ff;
             box-shadow: var(--primary-box-shadow-neon);
             border-radius: 80px;
@@ -235,17 +224,18 @@
         .game--background--black{
             align-items: center;
             justify-content: space-evenly;
-            width: 90%;
+            width: 95%;
             height: 95%;
         }
         .screen--box{
+            width: 90px;
             align-items: center;
-            height: 80%;
+            height: 140px;
         }
 
         .screen--box-mid{
             justify-content: center;
-            width: 40%;
+            width: 126px;
             border-left: 3px solid #59e2ff;
             border-right: 3px solid #59e2ff;
         }
@@ -262,7 +252,8 @@
 
         .machine--lever-rod{
             position: absolute;
-            transform: translate(55px,-100px) rotate(0.1turn);
+            transform-origin: bottom center;
+            transform: translate(15px,-125px);
             border: 5px solid #59e2ff;
             border-radius: 30px;
             box-shadow: var(--primary-box-shadow-neon);
@@ -302,10 +293,22 @@
         */
 
         .img--background{
+/* <<<<<<< HEAD */
             background-image: url(/assets/img/wheel-edit.png);
             width: 120px;
             height: 120px;
-        } */
+=======
+            justify-content: center;
+            align-items: center;
+            width: 85px;
+            height: 85px;
+        }
+
+        .div--box--img{
+            width: 100%;
+            height: 100%;
+/* >>>>>>> 91c038fb13361ef15a9df256e5b190a6f524fd00 */
+        }
 
 /* END main */
 
@@ -329,9 +332,8 @@
             background-color: var(--primary-color-bg-slot-machine);
             justify-content: center;
             align-items: center;
-            width: 100vw;
             height: 10vh;
-            padding: 5px;
+            padding: 5px 0;
             border: solid 1px darkblue;
 
         }
@@ -421,18 +423,42 @@
 
         /* LEVER ANIMATION */
         @keyframes lever-animation {
-            0% {transform: translate(55px,-100px) rotate(0.1turn);}
-            10% {transform: translate(57.5px,-90px) rotate(0.13turn);}
-            20% {transform: translate(60px,-80px) rotate(0.16turn);}
-            30% {transform: translate(62.5px,-70px) rotate(0.19turn);}
-            40% {transform: translate(75px,-60px) rotate(0.22turn);}
-            50% {transform: translate(80px,-40px) rotate(0.25turn);}
-            60% {transform: translate(75px,-40px) rotate(0.28turn);}
-            70% {transform: translate(70px,-30px)  rotate(0.31turn);}
-            80% {transform: translate(65px,-20px) rotate(0.34turn);}
-            90% {transform: translate(60px,-10px) rotate(0.37turn);}
-            100% {transform: translate(55px, 0px) rotate(0.4turn);}
+            0% {transform: translate(15px,-125px) rotateX(0.1turn);}
+            10% {transform: translate(15px,-125px) rotateX(0.13turn);}
+            20% {transform: translate(15px,-125px) rotateX(0.16turn);}
+            30% {transform: translate(15px,-125px) rotateX(0.19turn);}
+            40% {transform: translate(15px,-125px) rotateX(0.22turn);}
+            50% {transform: translate(15px,-125px) rotateX(0.25turn);}
+            60% {transform: translate(15px,-125px) rotateX(0.28turn);}
+            70% {transform: translate(15px,-125px) rotateX(0.31turn);}
+            80% {transform: translate(15px,-125px) rotateX(0.34turn);}
+            90% {transform: translate(15px,-125px) rotateX(0.37turn);}
+            100% {transform: translate(15px,-125px) rotateX(0.4turn);}
         }
+
+        /* 0% {transform: translate(55px,-100px) rotate(0.1turn);}
+        10% {transform: translate(60px,-90px) rotate(0.13turn);}
+        20% {transform: translate(65px,-80px) rotate(0.16turn);}
+        30% {transform: translate(70px,-70px) rotate(0.19turn);}
+        40% {transform: translate(75px,-60px) rotate(0.22turn);}
+        50% {transform: translate(80px,-40px) rotate(0.25turn);}
+        60% {transform: translate(75px,-40px) rotate(0.28turn);}
+        70% {transform: translate(70px,-30px)  rotate(0.31turn);}
+        80% {transform: translate(65px,-20px) rotate(0.34turn);}
+        90% {transform: translate(60px,-10px) rotate(0.37turn);}
+        100% {transform: translate(55px, 0px) rotate(0.4turn);} */
+
+          /* translate(55px,-100px)
+          translate(65px,-90px)
+          translate(75px,-80px)
+          translate(85px,-70px)
+          translate(95px,-60px)
+          translate(95px,-50px)
+          translate(95px,-40px)
+          translate(105px,-30px) 
+          translate(115px,-20px)
+          translate(125px,-10px)
+          translate(135px,0px) */
     /* END switch */
 /* END extras */
 
@@ -464,6 +490,7 @@
                 display: none;
             }
         }
+/* <<<<<<< branch-luiz */
 
         @media (max-width: 400px){
             #puzzle--title{
@@ -507,4 +534,6 @@
             }
         }
         
+=======
+/* >>>>>>> main */
 /* END media queries */
