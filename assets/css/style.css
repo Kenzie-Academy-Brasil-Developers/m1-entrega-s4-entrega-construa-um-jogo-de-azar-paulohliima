@@ -543,7 +543,7 @@
 /* END extras */
 
 /* START media queries */
-    @media only screen and (orientation: landscape) and (max-width:767px){
+    @media only screen and (orientation: landscape) and (max-width:767px){    
         /* START header */
             .header{
                 display: none;
