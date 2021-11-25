@@ -273,6 +273,7 @@
         justify-content: space-around;
         width: 50vw;
         height: 4.2vh;
+        cursor: grab;
     }
     td{
         cursor: pointer;
@@ -283,8 +284,7 @@
 
     li{
         font-family: "Architects Daughter";
-        font-size: 11px;
-        
+        font-size: 11px;        
     }
     
     .words--column--01{
