@@ -275,6 +275,9 @@
         width: 50vw;
         height: 4.2vh;
     }
+    td{
+        cursor: pointer;
+    }
 
     li{
         font-family: "Architects Daughter";
