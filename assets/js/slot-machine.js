@@ -1,12 +1,10 @@
 //START global-variables
-    const buttonGame02 = document.getElementById("slot-roll")
-    const leverRod = document.getElementById("slot-rod")
+    const buttonGame02 = document.getElementById("slot-roll");
+    const leverRod = document.getElementById("slot-rod");
     const imagem = document.getElementsByClassName("game--background--black")[0];
-    const img1 = document.getElementsByClassName("slot--image")[0]
-    const img2 = document.getElementsByClassName("slot--image")[1]
-    const img3 = document.getElementsByClassName("slot--image")[2]
-
-    let winOrLose = ""
+    const img1 = document.getElementsByClassName("slot--image")[0];
+    const img2 = document.getElementsByClassName("slot--image")[1];
+    const img3 = document.getElementsByClassName("slot--image")[2];
 //END global-variables
 
 //START dynamic-content-main
@@ -16,10 +14,9 @@
 
     const conditionWin = (img1, img2, img3) =>{
         if(img1 === img2 && img2 === img3 ){
-            winOrLose = "JackPot"
-            console.log("JackPot")
+            console.log("JackPot");
+            window.alert("JackPot");
         }else{
-            winOrLose = "Tente Novamente!"
             console.log("Tente Novamente!")
         }
     }
@@ -81,9 +78,11 @@
 //END dynamic-content-main
 
 //START event-listeners
-    buttonGame02.addEventListener("click", imgAnimation);
+buttonGame02.addEventListener("click", imgAnimation);
 //END event-listeners
 
-//START exports
-    export {winOrLose};
-//END exports
+
+
+
+
+

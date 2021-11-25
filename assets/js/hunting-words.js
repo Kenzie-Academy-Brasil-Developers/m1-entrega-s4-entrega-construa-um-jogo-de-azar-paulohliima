@@ -38,7 +38,6 @@ const verifyWord = (i) =>{
 //     console.log(letterCorrectly);
     
 // }
-
 const tableWords = () =>{
     let arrTable = []
    
@@ -117,7 +116,8 @@ const positionTable = (wordsTable) =>{
         }
         
     }
-    return wordsTable;
+    console.table(wordsTable)
+    randomLetters(wordsTable);
 }
 
 const randomLetters = (tableWords) =>{
@@ -139,6 +139,7 @@ const randomLetters = (tableWords) =>{
             }
         }
     }
+    console.table(tableWords);
 }
 
 //END dynamic-content-main
@@ -155,8 +156,4 @@ selectWords();
 
 
 //END event-listeners
-
-// const dataCel = document.getElementsByTagName("td")
-
-// const dataArr = Array.from(dataCel);
 
