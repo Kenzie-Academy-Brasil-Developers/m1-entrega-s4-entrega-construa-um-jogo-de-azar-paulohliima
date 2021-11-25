@@ -277,6 +277,9 @@
     td{
         cursor: pointer;
     }
+    .letter--blur{
+        opacity: 50%;
+    }
 
     li{
         font-family: "Architects Daughter";
@@ -284,7 +287,11 @@
         
     }
     
-    .words--column{
+    .words--column--01{
+        width: 49%;
+        margin-top: 4px;
+    }
+    .words--column--02{
         width: 49%;
         margin-top: 4px;
     }

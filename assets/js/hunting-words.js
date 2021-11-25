@@ -27,10 +27,17 @@ const verifyWord = (i) =>{
     correctlyWord(wordsFound.join(""));
 }
 
-const correctlyWord = (letterCorrectly) =>{
-    console.log(letterCorrectly);
-}
+// const correctlyWord = (letterCorrectly) =>{
+//     const checkWord = document.getElementsByClassName("game--words")[0]
+//     const columnWord1 = document.getElementsByClassName("words--column--01")[0]
+//     const columnWord2 = document.getElementsByClassName("words--column--02")[0]
 
+//     for()
+
+//     console.log(columnWord1.innerHTML);
+//     console.log(letterCorrectly);
+    
+// }
 const tableWords = () =>{
     let arrTable = []
    
@@ -109,7 +116,8 @@ const positionTable = (wordsTable) =>{
         }
         
     }
-    return wordsTable;
+    console.table(wordsTable)
+    randomLetters(wordsTable);
 }
 
 const randomLetters = (tableWords) =>{
@@ -131,6 +139,7 @@ const randomLetters = (tableWords) =>{
             }
         }
     }
+    console.table(tableWords);
 }
 
 //END dynamic-content-main
@@ -147,8 +156,4 @@ selectWords();
 
 
 //END event-listeners
-
-// const dataCel = document.getElementsByTagName("td")
-
-// const dataArr = Array.from(dataCel);
 
