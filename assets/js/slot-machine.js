@@ -38,7 +38,7 @@
             nextImg();
         },100)
         setTimeout(() => {
-            adding()
+            adding();
             clearInterval(interval)}, 6000);
         
         //Class-toggle

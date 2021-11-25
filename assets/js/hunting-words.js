@@ -27,17 +27,24 @@ const verifyWord = (i) =>{
     correctlyWord(wordsFound.join(""));
 }
 
-// const correctlyWord = (letterCorrectly) =>{
-//     const checkWord = document.getElementsByClassName("game--words")[0]
-//     const columnWord1 = document.getElementsByClassName("words--column--01")[0]
-//     const columnWord2 = document.getElementsByClassName("words--column--02")[0]
+const correctlyWord = (letterCorrectly) =>{
+    const checkWord = document.getElementsByClassName("game--words")[0];
+    const columnWord1 = document.getElementsByClassName("words--column--01")[0];
+    const columnWord2 = document.getElementsByClassName("words--column--02")[0];
+    const columnWords = document.querySelectorAll(".column--words");
 
-//     for()
+    for(let i = 0; i < columnWords.length; i++){
+        if(columnWords[i].innerText.includes(letterCorrectly)){
+        columnWords[i].classList.add("word-scratched")
+    }else{
+        console.log("Não funcionou")
+    }
+}
 
-//     console.log(columnWord1.innerHTML);
-//     console.log(letterCorrectly);
+    console.log(columnWords[0]);
+    console.log(letterCorrectly);
     
-// }
+}
 const tableWords = () =>{
     let arrTable = []
    
