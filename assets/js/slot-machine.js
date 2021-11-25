@@ -14,7 +14,8 @@
 
     const conditionWin = (img1, img2, img3) =>{
         if(img1 === img2 && img2 === img3 ){
-            console.log("JackPot")
+            console.log("JackPot");
+            window.alert("JackPot");
         }else{
             console.log("Tente Novamente!")
         }
