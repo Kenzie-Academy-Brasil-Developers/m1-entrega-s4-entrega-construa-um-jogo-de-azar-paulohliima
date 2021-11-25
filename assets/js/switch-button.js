@@ -1,22 +1,4 @@
-//START global-variables
-    const standbySound = document.getElementById('standby-slot-machine');
-    const wheelRoll = document.getElementById('wheelroll-slot-machine');
-    const winning = document.getElementById('winning-slot-machine');
-//END global-variables
-
 //START dynamic-content-main
-    //START sound-effects
-        //START hunting-words
-            
-        //END hunting-words  
-
-        //START slot-machine
-            function playBackgroundSound(){
-                
-            };
-        //END slot-machine
-    //END sound-effects
-
     //START switch-button
         function toggleGames(){
             //Variables
