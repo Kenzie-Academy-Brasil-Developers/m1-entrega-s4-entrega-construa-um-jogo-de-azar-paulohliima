@@ -71,7 +71,6 @@
 /* START body */
     body{
         width: 100vw;
-        height: 100vh;
     }
 /* END body */
 
@@ -106,7 +105,7 @@
 
 /* START main */
     .main{
-        height: 100%;
+        min-height: 100vh;
     }
 
     .main__information{
@@ -169,7 +168,7 @@
 
     .games--hunting-words{
         width: 100%;
-        height: 85%;
+        height: 90%;
     }
 
     .hunting-words--floor{
@@ -254,7 +253,7 @@
     .games--slot-machine{
         background-color: var(--primary-color-bg-slot-machine);
         width: 100%;
-        height: 85%;
+        height: 90%;
     }
 
     .slot-machine--title{
@@ -378,7 +377,6 @@
         animation-iteration-count: 2;
         animation-direction: alternate;
     }
-
 /* END main */
 
 /* START footer */
@@ -409,7 +407,7 @@
             align-items: center;
             background-color: #3d3f41;
             width: 100%;
-            height: 15%;
+            height: 10%;
         }
 
         .games--title{
@@ -478,17 +476,15 @@
             border-radius: 50%;
         }
     /* END switch */
-
-    /* LIGHT ANIMATION */
-
-    /*
-        animation-name: light-animation;
-        animation-duration: 0.2s;
-        animation-iteration-count: infinite;
-    */
     
     /* START lights-animations */
     @keyframes light-animation {
+        
+            /*
+                animation-name: light-animation;
+                animation-duration: 0.2s;
+                animation-iteration-count: infinite;
+            */
         from {background-color: red;}
         to {background-color: yellow;}
         }
@@ -508,7 +504,7 @@
 /* END extras */
 
 /* START media queries */
-    @media only screen and (orientation: landscape){
+    @media only screen and (orientation: landscape) and (max-width:767px){
         /* START header */
             .header{
                 display: none;
@@ -516,6 +512,10 @@
         /* END header */
 
         /* START main */
+            .main{
+                height: 100vh;
+            }
+
             .main__information{
                 display: none;
             }
@@ -532,5 +532,202 @@
                 display: none;
             }
         /* END footer */
+    }
+
+    @media only screen and (min-height: 480px){
+        /* START body */
+            body{
+                overflow-x: hidden;
+            }
+        /* START body */
+        
+        /* START main */
+            .hunting-words--newspapper-game{
+                height: 92.5%;
+            }
+
+            .slot-machine--title{
+                font-size: 40px; 
+            }
+
+            .slot-machine--outer-frame{
+                width: 440px;
+                height: 285px;
+            }
+            
+            .slot-machine--lights{
+                width: 380px;
+                height: 220px;
+            }
+
+            .slot-machine--inner-frame{
+                width: 340px;
+                height: 165px;
+            }
+
+            .slot-machine--screen{
+                height: 90%;
+            }
+
+            .slot-machine--screen-slot{
+                width: 80px;
+                height: 80px;
+            }
+
+            .slot-machine--coupling{
+                transform: translate(257px,0);
+                width: 65px;
+                height: 90px;
+            }
+
+            .slot-machine--lever-rod{
+                transform: translate(13px,-93px);
+                width: 30px;
+                height: 130px;
+            }
+            
+            .slot-machine--lever-grab{
+                transform: translate(-5px,-135px);
+                width: 75px;
+                height: 75px;
+            }
+        /* END main */
+
+        /* START extras */
+            /* START lever-animations */
+                @keyframes grab-animation {
+                    0% {transform: translate(-5px,-135px);}
+                    100% {transform: translate(-5px,0px);}
+                }
+
+                @keyframes rod-animation {
+                    0% {transform: translate(13px,-93px) rotateX(0turn);}
+                    100% {transform: translate(13px,-93px) rotateX(0.26turn);}
+                }
+            /* END lever-animations */
+        /* END extras */
+    }
+
+    @media only screen and (min-width: 768px){
+        /* START body */
+            body{
+                overflow-x: hidden;
+            }
+        /* START body */
+        
+        /* START main */
+            .main{
+                height: 100%;
+            }
+
+            .information--mobile{
+                display: none;
+            }
+
+            .main_games{
+                display: block;
+                height: 600px;
+            }
+
+            .slot-machine--title{
+                font-size: 60px;
+            }
+
+            .slot-machine--outer-frame{
+                width: 700px;
+                height: 380px;
+            }
+            
+            .slot-machine--lights{
+                width: 625px;
+                height: 300px;
+            }
+
+            .slot-machine--inner-frame{
+                width: 565px;
+                height: 230px;
+            }
+
+            .slot-machine--screen-slot{
+                width: 150px;
+                height: 150px;
+            }
+
+            .slot-machine--coupling{
+                transform: translate(402px,0);
+                width: 95px;
+                height: 115px;
+            }
+
+            .slot-machine--lever-rod{
+                transform: translate(25px,-125px);
+                width: 35px;
+                height: 175px;
+            }
+            
+            .slot-machine--lever-grab{
+                transform: translate(0px,-180px);
+                width: 90px;
+                height: 90px;
+            }
+        /* END main */
+
+        /* START footer */
+            .footer{
+               margin-top: 50px; 
+            }
+        /* END footer */
+
+        /* START extras */
+            /* START lever-animations */
+                @keyframes grab-animation {
+                    0% {transform: translate(0px,-180px);}
+                    100% {transform: translate(0px,5px);}
+                }
+
+                @keyframes rod-animation {
+                    0% {transform: translate(25px,-125px) rotateX(0turn);}
+                    100% {transform: translate(25px,-125px) rotateX(0.26turn);}
+                }
+            /* END lever-animations */
+        /* END extras */
+    }
+
+    @media only screen and (min-width: 1024px){
+        /* START body */
+            body{
+                overflow-x: hidden;
+            }
+        /* START body */
+        
+        /* START main */
+            .main_games{
+                height: 650px;
+            }
+            
+            .slot-machine--lever-grab{
+                cursor: pointer;
+            }
+        /* END main */
+
+        /* START footer */
+            .footer{
+               margin-top: 50px; 
+            }
+        /* END footer */
+
+        /* START extras */
+            /* START lever-animations */
+                @keyframes grab-animation {
+                    0% {transform: translate(0px,-180px);}
+                    100% {transform: translate(0px,5px);}
+                }
+
+                @keyframes rod-animation {
+                    0% {transform: translate(25px,-125px) rotateX(0turn);}
+                    100% {transform: translate(25px,-125px) rotateX(0.26turn);}
+                }
+            /* END lever-animations */
+        /* END extras */
     }
 /* END media queries */

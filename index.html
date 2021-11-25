@@ -8,50 +8,15 @@
         <link rel="stylesheet" href="./assets/css/reset.css">
         <link rel="stylesheet" href="./assets/css/style.css">
     </head>
-    <body> 
-        <!-- SOUNDS -->
-            <!-- HUNTING-WORD -->
-                <audio id="ambient-hunting-word" src="./assets/sounds/caça-palavras/ambient-sound.mp3">
-                    <source 
-                        id="ambient-hunting-word" 
-                        src="./assets/sounds/caça-palavras/ambient-sound.mp3" 
-                        type="audio/mpeg" />
-
-                    <source 
-                        id="scribble-hunting-word" 
-                        src="./assets/sounds/caça-palavras/scribble-sound.wav" 
-                        type="audio/mp3" />
-                </audio>
-            <!-- HUNTING-WORD -->
-        
-            <!-- SLOT-MACHINE -->
-                <audio id="standby-slot-machine" src="./assets/sounds/caça-níqueis/standby-sound.mp3">
-                    <source
-                        id="standby-slot-machine"
-                        src="./assets/sounds/caça-níqueis/standby-sound.mp3" 
-                        type="audio/mp3" />
-
-                    <source
-                        id="wheelroll-slot-machine"
-                        src="./assets/sounds/caça-níqueis/wheel-roll-sound.wav" 
-                        type="audio/wav" />
-
-                    <source
-                        id="winning-slot-machine" 
-                        src="./assets/sounds/caça-níqueis/winning-sound.wav" 
-                        type="audio/wav" />
-                </audio>
-            <!-- SLOT-MACHINE -->
-        <!-- SOUNDS -->
-
-        <header class="flex--row header">
+<body> 
+    <header class="flex--row header">
         <figure class="flex--row header__figure">
             <img class="figure--logo-image" src="https://kenzie.com.br/images/logoblue.svg" alt="Kenzie logotipo" >
             <figcaption class="figure--logo-title">Games</figcaption>
         </figure>
     </header>
     
-    <main class="main">
+    <main id="main" class="main">
         <section class="main__information">
             <div class="information--title-area">
                 <h1 class="information--title">
@@ -221,11 +186,54 @@
         </span> 
     </footer>
 
+    <!-- SOUNDS -->
+        <!-- HUNTING-WORDS -->
+            <audio id="ambient-hunting-word">
+                <source 
+                    src="./assets/sounds/caça-palavras/ambient-sound.mp3" 
+                    type="audio/mpeg" />
+
+            </audio>
+
+            <audio id="scribble-hunting-word">
+                <source
+                    src="./assets/sounds/caça-palavras/scribble-sound.mp3" 
+                    type="audio/mpeg" />
+            </audio>
+        <!-- HUNTING-WORDS -->
+    
+        <!-- SLOT-MACHINE -->
+            <audio id="standby-slot-machine">
+                <source
+                    id="standby-slot-machine"
+                    src="./assets/sounds/caça-níqueis/standby-sound.mp3" 
+                    type="audio/mp3" />
+
+                <source
+                    id="wheelroll-slot-machine"
+                    src="./assets/sounds/caça-níqueis/wheel-roll-sound.wav" 
+                    type="audio/wav" />
+
+                <source
+                    id="winning-slot-machine" 
+                    src="./assets/sounds/caça-níqueis/winning-sound.wav" 
+                    type="audio/wav" />
+            </audio>
+        <!-- SLOT-MACHINE -->
+    <!-- SOUNDS -->
 
     <!-- SCRIPTS -->
-        <script src="./assets/js/switch-button.js"></script>
-        <script src="./assets/js/slot-machine.js"></script>
-        <script src="./assets/js/hunting-words.js"></script>
+        <script src="./assets/js/switch-button.js">
+        </script>
+
+        <script src="./assets/js/slot-machine.js" type="module">
+        </script>
+
+        <script src="./assets/js/hunting-words.js" type="module">
+        </script>
+
+        <script src="./assets/js/sound-effects.js" type="module">
+        </script>
     <!-- SCRIPTS -->
 </body>
 </html>

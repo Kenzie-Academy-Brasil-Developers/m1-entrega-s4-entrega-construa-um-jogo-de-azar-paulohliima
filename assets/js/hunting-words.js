@@ -43,7 +43,7 @@ const positionTable = () =>{
     let currentLine = [];
 
     let countWord = 0;
-    console.log(wordsSelect)
+    
     for(let i = 0; i < wordsSelect.length; i++){ // roda 3 vezes por conta do tamanho do array de palavras selecionadas
         lineP = Math.floor(Math.random() * 9);
         columnP = Math.floor(Math.random() * 9);
@@ -62,7 +62,6 @@ const positionTable = () =>{
             console.log("não cabe");
         }
     }
-    console.table(wordsTable);
     return wordsTable;
 }
 positionTable();
@@ -84,6 +83,5 @@ const randomLetters = () =>{
             }
         }
     }
-    console.table(tableWords);
 }
 randomLetters()
