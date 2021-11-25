@@ -284,9 +284,13 @@
         opacity: 50%;
     }
 
-    li{
+    .column--words{
         font-family: "Architects Daughter";
         font-size: 11.5px;      
+    }
+    .word-scratched{
+        text-decoration: line-through;
+        opacity: 80%;
     }
     
     .words--column--01{
@@ -312,6 +316,8 @@
         font-family: "White Dream", serif;
         text-shadow: 0 0 15px #FFF, 0 0 20px yellow, 0 0 30px yellow, 0 0 40px #49FF18;
         padding-top: 2.5%;
+        animation: light-blink ease-in 5s infinite;
+
     }
 
     .slot-machine--outer-frame{
@@ -455,13 +461,31 @@
     }
 
     .slot-machine--lights{
+        position: relative;
         align-items: center;
         justify-content: center;
         margin: 0 auto;
-        border: 18px dotted red;
-        border-radius: 35%;
-        width: 285px;
-        height: 135px;
+        border-radius: 28%;
+        width: 295px;
+        height: 150px;
+        overflow: hidden;
+    }
+    .slot-machine--lights::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        background: yellow;
+        animation: light-animation 2s linear infinite;
+    }
+    .slot-machine--lights::after{
+        content: "";
+        position: sticky;
+        background: var(--primary-color-bg-slot-machine);
+        inset: 4px;
+        width: 97%;
+        height: 95%;
+        border-radius: 28%;
     }
 
     .slot-machine--inner-frame{
@@ -472,6 +496,9 @@
         border-radius: 80px;
         width: 250px;
         height: 100px;
+        position: absolute;
+        z-index: 1;
+        background: var(--primary-color-bg-slot-machine);
     }
 
     .slot-machine--screen{
@@ -924,18 +951,30 @@
             }
         }
     /* END coins-animations */
-
+    
     /* START lights-animations */
         @keyframes light-animation {
-            
-                /*
-                    animation-name: light-animation;
-                    animation-duration: 0.2s;
-                    animation-iteration-count: infinite;
-                */
-            from {background-color: red;}
-            to {background-color: yellow;}
+            0%
+            {
+                transform: rotate(0deg);
             }
+            100%
+            {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes light-blink {
+            0%{
+                text-shadow:0 0 15px #FFF, 0 0 20px yellow, 0 0 30px yellow, 0 0 40px #49FF18;
+            }
+            50%{
+                text-shadow:0 0 10px yellow, 0 0 0px yellow, 0 0 5px #49FF18;
+            }
+            100%{
+                text-shadow: 0 0 15px #FFF, 0 0 20px yellow, 0 0 30px yellow, 0 0 40px #49FF18;
+            }
+        }
     /* END lights-animations */
 
     /* START lever-animations */
@@ -972,6 +1011,9 @@
                 display: block;
                 width: 100%;
                 height: 100%;
+            }
+            .title--text{
+                display: none;
             }
         /* END main */
 
@@ -1126,6 +1168,9 @@
                 transform: translate(0px,-180px);
                 width: 90px;
                 height: 90px;
+            }
+            .slot-machine--lights::before{
+                height: 235px;
             }
         /* END main */
 

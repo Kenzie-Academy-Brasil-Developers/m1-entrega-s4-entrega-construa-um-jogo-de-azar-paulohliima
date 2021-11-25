@@ -119,7 +119,7 @@
             nextImg();
         },100)
         setTimeout(() => {
-            adding()
+            adding();
             clearInterval(interval)}, 6000);
         
         //Class-toggle
@@ -165,9 +165,3 @@
 //START event-listeners
 buttonGame02.addEventListener("click", imgAnimation);
 //END event-listeners
-
-
-
-
-
-
