@@ -45,322 +45,394 @@
 /* END root-variables */
 
 /* START general */
-        .flex{
-            display: flex;
-        }
-        
-        .flex--col{
-            display: flex;
-            flex-direction: column;
-        }
-        body{
-            overflow-x: hidden;
-        }
+    .flex--row{
+        display: flex;
+        flex-flow: row wrap;
+    }
+    
+    .flex--col{
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .hide{
+        display: none;
+    }
+
+    .show{
+        display: block;
+    }
 /* END general */
 
 /* START html */
+    html{}
 /* END html */
 
 /* START body */
+    body{
+        width: 100vw;
+        height: 100vh;
+    }
 /* END body */
 
 /* START header */
+    .header{
+        align-items: center;
+        justify-content: center;
+        background-color: #3d3f41;
+        width: 100%;
+        height: 90px;
+    }
 
-        .header{
-            width: 100%;
-            height: 80px;
-            background-color: #3d3f41;
-            align-items: center;
-            justify-content: center;
-        }
-        .header__main{
-            justify-content: center;
-            align-items: center;
-        }
-        .header--logoImg{
-            width: 60px;
-            height: 60px;   
-        }
-        .header--logoTitle{
-            margin-left: 8px;
-            font-size: 24px;
-            text-transform: uppercase;
-            color: white;
-            font-family: "GameCube", sans-serif;
-        }
-        
+    .header__figure{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .figure--logo-image{
+        width: 60px;
+        height: 60px;   
+    }
+
+    .figure--logo-title{
+        font-family: "GameCube", sans-serif;
+        font-weight: bold;
+        font-size: 24px;
+        text-transform: uppercase;
+        color: white;
+        margin-left: 15px;
+    }    
 /* END header */
 
 /* START main */
-        .main{
-            background-color: #fff;
-        }
+    .main{
+        height: 100%;
+    }
 
-        .main__title{
-            margin-top: 20px;
-            text-align: center;
-            font-size: 50px;
-            font-family: "Fortnite", sans-serif;
-            color: #979DAC;
-        }
-        
-        #game1{
-            width: 100%;
-        }
+    .main__information{
+        font-family: "Fortnite", sans-serif;
+    }
 
-        .puzzle--box{
-            justify-content: space-around;
-            width: 100%;
-        }
+    .information--title-area{}
 
-        .game1__div{
-            padding: 0 5px 0 5px;
-            background-image: url(../img/paper.jpg);
-            height: 100vh;
-        }
+    .information--title{
+        font-size: 50px;
+        text-align: center;
+        color: #979DAC;
+        margin: 15px 0;
+    }
+    
+    .information--word-play{}
 
-        #game--title{
-            font-size: 26px;
-            font-family: "Cormorant Garamond, bold", serif;
-            text-align: center;
-            font-weight: 900;
-            border-bottom: 1px solid black;
-            padding: 10px 0 5px 0;
-        }
+    .information--word-games{}
 
-        #game--date{
-            text-align: center;
-            font-size: 11px;
-            border-top: 4px double black;
-            margin-top: 1px;
-            padding-top: 5px;
-        }
+    .information--games-area{
+        padding: 5%;
+    }
 
-        #puzzle--title{
-            font-size: 18px;
-            font-family: "Architects Daughter";
-            text-transform: uppercase;
-            padding: 20px 0 0 42px;
-            margin-bottom: 3px;
-        }
+    .information--games-meaning{}
 
-        #puzzle{
-            width: 250px;
-            height: 250px;
-            background-color: transparent;
-            border: 3px solid black;
-            
-        }
+    .information--games-title{
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
 
-        #words--list{
-            background-color: transparent;
-            border: 3px solid black;
-            width: 200px;
-            height: 250px;
-        }
+    .information--games-paragraph{
+        letter-spacing: 1.5;
+        line-height: 1.25;
+        margin-bottom: 15px;
+    }
 
-        #icon--button{
-            width: 50px;
-            float: inline-end;
-        }
+    .information--games-paragraph:last-child{
+        margin-bottom: 30px;
+    }
 
-        #icon--img{
-            width: 50px;
-        }
+    .main__mobile{ 
+        padding: 25px 25px;
+    }
 
-        #title2{
-            margin-right: 10px;
-            font-size: 30px;
-            font-family: "Fortnite", sans-serif;
-            color: #979DAC;
-        }
+    .information--mobile{
+        margin: 30px 0;
+        padding: 0 5%;
+    }
 
-        #game2{
-            background-color: var(--primary-color-bg-slot-machine);
-            width: 100vw;
-            height: 80vh;
-        }
+    .information--mobile-msg{
+        font-family: "Fortnite", sans-serif;
+        font-size: 25px;
+        font-weight: bolder;
+        text-align: center;
+    }
 
-        .game2__title{
-            text-align: center;
-            color: white;
-            font-size: 40px;  
-            font-family: "White Dream", serif;
-            text-shadow: var(--box-shadow-neon);
-            margin-top: 8px;
-        }
+    .main_games{
+        display: none;
+    }
 
-        .game2__divMain{
-            position: relative;
-            align-items: center;
-            justify-content: center;
-            width: 482px;
-            height: 260px;
-            border: 5px solid #59e2ff;
-            box-shadow: var(--primary-box-shadow-neon);
-            border-radius: 35%;
-            margin: 0 auto;
-            margin-top: 15px;
-        }
+    .games--hunting-words{
+        width: 100%;
+        height: 85%;
+    }
 
-        .game2__divMain--second{
-            align-items: center;
-            justify-content: center;
-            width: 420px;
-            height: 205px;
-            margin: 0 auto;
-            border: 18px dotted red;
-            border-radius: 35%;
-        }
+    .hunting-words--floor{
+        justify-content: center;
+        align-items: center;
+        background-image: url(../img/caça-palavras/floor-grantite.jpg);
+        width: 100%;
+        height: 100%;
+    }
 
-        .machine--background{
-            align-items: center;
-            justify-content: center;
-            width: 394px;
-            height: 164px;
-            border: 5px solid #59e2ff;
-            box-shadow: var(--primary-box-shadow-neon);
-            border-radius: 80px;
-        }
+    .hunting-words--table{
+        justify-content: center;
+        align-items: center;
+        background-image: url(../img/caça-palavras/wood.jpg);
+        border-radius: 10px;
+        width: 97.5%;
+        height: 97.5%;
+    }
 
-        .game--background--black{
-            align-items: center;
-            justify-content: space-evenly;
-            width: 95%;
-            height: 95%;
-        }
-        
-        .screen--box{
-            width: 90px;
-            align-items: center;
-            height: 140px;
-        }
+    .hunting-words--newspapper{
+        background-image: url(../img/caça-palavras/paper.jpg);
+        width: 95%;
+        height: 90%;
+    }
 
-        .screen--box-mid{
-            justify-content: center;
-            width: 126px;
-            border-left: 3px solid #59e2ff;
-            border-right: 3px solid #59e2ff;
-        }
+    .hunting-words--newspapper-title{
+        font-family: "Cormorant Garamond", serif;
+        text-align: center;
+        border-bottom: 4px double black;
+        padding: 2% 0;
+        margin: 0 3%;
+    }
 
-        .machine--coupling{
-            position: absolute;
-            transform: translate(275px,0);
-            border: 5px solid #59e2ff;
-            border-radius: 10%;
-            box-shadow: var(--primary-box-shadow-neon);
-            width: 60px;
-            height: 70px;
-        }
+    .title--text{
+        font-size: 25px;
+        font-weight: bold;
+    }
 
-        .machine--lever-rod{
-            position: absolute;
-            transform-origin: bottom center;
-            transform: translate(15px,-125px);
-            border: 5px solid #59e2ff;
-            border-radius: 30px;
-            box-shadow: var(--primary-box-shadow-neon);
-            width: 25px;
-            height: 150px;
-        }
+    .hunting-words--newspapper-game{
+        justify-content: space-between;
+        text-align: center;
+        height: 80%;
+    }
 
-        .machine--lever-rod:hover{
-            animation-name: lever-animation;
-            animation-duration: 1s;
-            animation-delay: 0.25s;
-            animation-iteration-count: 2;
-            animation-direction: alternate;
-        }
+    .game-pre{}
 
-        .machine--lever-grab{
-            position: absolute;
-            transform: translate(-27px,-50px);
-            font-family: "White Dream", serif;
-            font-weight: 700;
-            text-shadow:  0 0 15px red, 0 0 20px red, 0 0 30px red, 0 0 40px red, 0 0 55px red, 0 0 75px red;
-            background: var(--primary-color-bg-slot-machine);
-            color: red;
-            border: 5px solid red;
-            border-radius: 100%;
-            box-shadow: var(--secondary-box-shadow-neon);
-            width: 80px;
-            height: 80px;
-        }
+    .game--data{
+        display: block;
+        font-size: 11px;
+        margin-top: 5px;
+    }
 
-        .machine--lever-grab:hover{
-            box-shadow: inset 0 0 20px red, 0 0 40px red, 0 0 55px red, 0 0 75px red;
-        }
+    .game--title{
+        font-size: 16px;
+        font-family: "Architects Daughter";
+        text-transform: uppercase;
+        margin: 5px 0;
+    }
 
-        /* --- DIVISÃO DO MACHINE SLOT ---
-        background: linear-gradient(90deg, rgba(0,99,113,1) 49%, rgba(124,232,255,1) 50%, rgba(0,99,113,1) 51%);
-        */
+    .game-area{
+        justify-content: space-between;
+        margin: 0 20px;
+        height: 74%; 
+    }
 
-        .img--background{
-            justify-content: center;
-            align-items: center;
-            width: 85px;
-            height: 85px;
-        }
+    .game--board{
+        display: inline-block;
+        margin-left: 20px;
+        border: 2px solid black;
+        width: 60%;
+        height: 100%;
+    }
 
-        .div--box--img{
-            width: 100%;
-            height: 100%;
-        }
+    .game--words{
+        display: inline-block;
+        margin-right: 20px;
+        border: 2px solid black;
+        width: 20%;
+        height: 100%;
+    }
+
+    .games--slot-machine{
+        background-color: var(--primary-color-bg-slot-machine);
+        width: 100%;
+        height: 85%;
+    }
+
+    .slot-machine--title{
+        text-align: center;
+        color: yellow;
+        font-size: 30px;  
+        font-family: "White Dream", serif;
+        text-shadow: 0 0 15px #FFF, 0 0 20px yellow, 0 0 30px yellow, 0 0 40px #49FF18;
+        padding-top: 2.5%;
+    }
+
+    .slot-machine--outer-frame{
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        width: 350px;
+        height: 200px;
+        border: 5px solid #59e2ff;
+        box-shadow: var(--primary-box-shadow-neon);
+        border-radius: 35%;
+        margin: 0 auto;
+        margin-top: 15px;
+    }
+    
+    .slot-machine--lights{
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        border: 18px dotted red;
+        border-radius: 35%;
+        width: 285px;
+        height: 135px;
+    }
+
+    .slot-machine--inner-frame{
+        align-items: center;
+        justify-content: center;
+        box-shadow: var(--primary-box-shadow-neon);
+        border: 5px solid #59e2ff;
+        border-radius: 80px;
+        width: 250px;
+        height: 100px;
+    }
+
+    .slot-machine--screen{
+        align-items: center;
+        justify-content: space-evenly;
+        width: 95%;
+        height: 65%;
+    }
+
+    .slot-machine--screen-slot{
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+    }
+
+    .slot--image{
+        width: 100%;
+        height: 100%;
+    }
+
+    .slot-machine--screen-bar{
+        box-shadow: var(--primary-box-shadow-neon);
+        border: 2.5px solid #59e2ff;
+        border-radius: 10px;
+        height: 75%;
+    }
+
+    .slot-machine--coupling{
+        position: absolute;
+        transform: translate(205px,0);
+        border: 5px solid #59e2ff;
+        border-radius: 10%;
+        box-shadow: var(--primary-box-shadow-neon);
+        width: 50px;
+        height: 60px;
+    }
+
+    .slot-machine--lever-rod{
+        position: absolute;
+        transform-origin: bottom center;
+        transform: translate(10px,-75px);
+        border: 5px solid #59e2ff;
+        border-radius: 30px;
+        box-shadow: var(--primary-box-shadow-neon);
+        width: 25px;
+        height: 100px;
+    }
+    
+    .slot-machine--lever-rod.animation{
+        animation-name: rod-animation;
+        animation-duration: 1s;
+        animation-delay: 0.25s;
+        animation-iteration-count: 2;
+        animation-direction: alternate;
+    }
+    
+    .slot-machine--lever-grab{
+        position: absolute;
+        transform: translate(-5px,-115px);
+        font-family: "White Dream", serif;
+        font-size: 10px;
+        font-weight: 700;
+        text-shadow:  0 0 15px red, 0 0 20px red, 0 0 30px red, 0 0 40px red, 0 0 55px red, 0 0 75px red;
+        background: var(--primary-color-bg-slot-machine);
+        color: red;
+        border: 5px solid red;
+        border-radius: 100%;
+        box-shadow: var(--secondary-box-shadow-neon);
+        width: 65px;
+        height: 65px;
+    }
+
+    .slot-machine--lever-grab.animation{
+        box-shadow: inset 0 0 20px red, 0 0 40px red, 0 0 55px red;
+        animation-name: grab-animation;
+        animation-duration: 1s;
+        animation-delay: 0.25s;
+        animation-iteration-count: 2;
+        animation-direction: alternate;
+    }
 
 /* END main */
 
 /* START footer */
-
-        .footer__main{
-            width: 100%;
-            height: 50px;
-            background-color: var(--secondary-background-color);
+        .footer{
+            font-family: "Fortnite",sans-serif;
+            font-size: 16px;
+            text-align: center;
+            letter-spacing: 1.5px;
+            line-height: 1.25;
+            background-color: #3d3f41;
             color: white;
+            padding: 10px;
+            max-width: 100%;
         }
 
-        .footer--autor{}
+        .footer_autor{
+            margin-bottom: 10px;
+            padding: 5px;
+        }
 
-        .footer--madeIn{}
-
+        .footer_copyright{}
 /* END footer */
 
 /* START extras */
     /* START switch */
-        /* The switch - the box around the slider */
-        .main__switch{
-            background-color: var(--primary-color-bg-slot-machine);
+        .games--switch{
             justify-content: center;
             align-items: center;
-            height: 10vh;
-            padding: 5px 0;
-            border: solid 1px darkblue;
-
+            background-color: #3d3f41;
+            width: 100%;
+            height: 15%;
         }
 
-        .switch--title{
-            display: inline-block;
+        .games--title{
             font-family: "Fortnite", sans-serif;
             font-size: 20px;
             color: white;
             margin-right: 15px;
         }
         
-        .switch--button {
+        .games--button {
             position: relative;
             display: inline-block;
             width: 60px;
             height: 34px;
         }
         
-        /* Hide default HTML checkbox */
-        .switch--button input {
+        .button-input {
             opacity: 0;
             width: 0;
             height: 0;
         }
         
-        /* The slider */
-        .slider {
+        .button--slider {
             position: absolute;
             cursor: pointer;
             top: 0;
@@ -372,7 +444,7 @@
             transition: .4s;
         }
         
-        .slider:before {
+        .button--slider:before {
             position: absolute;
             content: "";
             height: 26px;
@@ -384,129 +456,81 @@
             transition: .4s;
         }
         
-        input:checked + .slider {
+        .button-input:checked + .button--slider {
             background-color: #2196F3;
         }
         
-        input:focus + .slider {
+        .button-input:focus + .button--slider {
             box-shadow: 0 0 1px #2196F3;
         }
         
-        input:checked + .slider:before {
+        .button-input:checked + .button--slider:before {
             -webkit-transform: translateX(26px);
             -ms-transform: translateX(26px);
             transform: translateX(26px);
         }
         
-        /* Rounded sliders */
-        .slider.round {
+        .button--slider.round {
             border-radius: 34px;
         }
         
-        .slider.round:before {
+        .button--slider.round:before {
             border-radius: 50%;
         }
-
-        /* LIGHT ANIMATION */
-
-        /*
-            animation-name: light-animation;
-            animation-duration: 0.2s;
-            animation-iteration-count: infinite;
-        */
-
-        @keyframes light-animation {
-            from {background-color: red;}
-            to {background-color: yellow;}
-          }
-
-        /* LEVER ANIMATION */
-        @keyframes lever-animation {
-            0% {transform: translate(15px,-125px) rotateX(0.1turn);}
-            10% {transform: translate(15px,-125px) rotateX(0.13turn);}
-            20% {transform: translate(15px,-125px) rotateX(0.16turn);}
-            30% {transform: translate(15px,-125px) rotateX(0.19turn);}
-            40% {transform: translate(15px,-125px) rotateX(0.22turn);}
-            50% {transform: translate(15px,-125px) rotateX(0.25turn);}
-            60% {transform: translate(15px,-125px) rotateX(0.28turn);}
-            70% {transform: translate(15px,-125px) rotateX(0.31turn);}
-            80% {transform: translate(15px,-125px) rotateX(0.34turn);}
-            90% {transform: translate(15px,-125px) rotateX(0.37turn);}
-            100% {transform: translate(15px,-125px) rotateX(0.4turn);}
-        }
     /* END switch */
+
+    /* LIGHT ANIMATION */
+
+    /*
+        animation-name: light-animation;
+        animation-duration: 0.2s;
+        animation-iteration-count: infinite;
+    */
+    
+    /* START lights-animations */
+    @keyframes light-animation {
+        from {background-color: red;}
+        to {background-color: yellow;}
+        }
+    /* END lights-animations */
+
+    /* START lever-animations */
+    @keyframes grab-animation {
+        0% {transform: translate(-5px,-115px);}
+        100% {transform: translate(-5px,-15px);}
+    }
+
+    @keyframes rod-animation {
+        0% {transform: translate(10px,-75px) rotateX(0turn);}
+        100% {transform: translate(10px,-75px) rotateX(0.26turn);}
+    }
+    /* END lever-animations */
 /* END extras */
 
 /* START media queries */
     @media only screen and (orientation: landscape){
-        /* START general */
-            .hidden{
-                display: none;
-            }
-
-            .show{
-                display: block;
-            }
-            #game--title{
-                display: none;
-            }
-        /* END general */
-        
+        /* START header */
             .header{
                 display: none;
             }
+        /* END header */
 
-            .main__title{
+        /* START main */
+            .main__information{
                 display: none;
             }
 
-            #game2{
-                width: 100vw;
-                height: 100vh;
+            .main_games{
+                display: block;
+                width: 100%;
+                height: 100%;
             }
-            .footer__main{
+        /* END main */
+
+        /* START footer */
+            .footer{
                 display: none;
             }
-        }
-        @media (max-width: 400px){
-            #puzzle--title{
-                padding: 20px 0 0 0;
-            }
-        }
-        
-        @media (min-width: 641px){
-        
-            .show{
-                display: flex;
-                justify-content: center;
-                background-image: url(../img/floor\ .jpg);
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-            }
-            
-            .game--table{
-                width: 1000px;
-                height: 400px;
-                background-image: url(../img/wood.jpg);
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                display: flex;
-                justify-content: center;
-                padding: 70px 0 70px 0;
-                margin: 50px 0 50px 0;
-                border-radius: 20px;
-            }
-        
-            .game1__div{
-                width: 640px;
-                height: 400px;
-                background-image: url(../img/paper.jpg);
-            }
-        
-            footer{
-                background-image: url(/assets/img/wood.jpg);
-            }
-        }
+        /* END footer */
+    }
 /* END media queries */

@@ -1,113 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kenzie Games</title>
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-<body>
-    <header class="header flex">
-        <div class="header__main flex">
-            <img src="https://kenzie.com.br/images/logoblue.svg" alt="Cassino logotipo" class="header--logoImg">
-            <figcaption class="header--logoTitle">Games</figcaption>
-        </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kenzie Games</title>
+        <link rel="stylesheet" href="./assets/css/reset.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+    <body>
+        <!-- SOUNDS -->
+            <!-- HUNTING-WORD -->
+                <audio id="ambient-hunting-word" src="./assets/sounds/caça-palavras/ambient-sound.mp3">
+                    <source 
+                        id="ambient-hunting-word" 
+                        src="./assets/sounds/caça-palavras/ambient-sound.mp3" 
+                        type="audio/mpeg" />
+
+                    <source 
+                        id="scribble-hunting-word" 
+                        src="./assets/sounds/caça-palavras/scribble-sound.wav" 
+                        type="audio/mp3" />
+                </audio>
+            <!-- HUNTING-WORD -->
+        
+            <!-- SLOT-MACHINE -->
+                <audio id="standby-slot-machine" src="./assets/sounds/caça-níqueis/standby-sound.mp3">
+                    <source
+                        id="standby-slot-machine"
+                        src="./assets/sounds/caça-níqueis/standby-sound.mp3" 
+                        type="audio/mp3" />
+
+                    <source
+                        id="wheelroll-slot-machine"
+                        src="./assets/sounds/caça-níqueis/wheel-roll-sound.wav" 
+                        type="audio/wav" />
+
+                    <source
+                        id="winning-slot-machine" 
+                        src="./assets/sounds/caça-níqueis/winning-sound.wav" 
+                        type="audio/wav" />
+                </audio>
+            <!-- SLOT-MACHINE -->
+        <!-- SOUNDS -->
+
+        <header class="flex--row header">
+        <figure class="flex--row header__figure">
+            <img class="figure--logo-image" src="https://kenzie.com.br/images/logoblue.svg" alt="Kenzie logotipo" >
+            <figcaption class="figure--logo-title">Games</figcaption>
+        </figure>
     </header>
     
-    <main class="main flex--col">
-        <h1 class="main__title">Jogos de Azar</h1>
+    <main class="main">
+        <section class="main__information">
+            <div class="information--title-area">
+                <h1 class="information--title">
+                    <span class="information--word-play">Play</span> 
+                    <span class="information--word-games">Games!</span>
+                </h1>
+            </div>
 
-        <div id="switch-game" class="main__switch flex">
-            <span id="game-title" class="switch--title">Caça-Palavras</span>
+            <div class="information--mobile">
+                <h2 class="information--mobile-msg">
+                    Coloque o dispositivo em posição Landscape para ter acesso aos jogos
+                </h2>
+            </div>
 
-            <label class="switch--button">
-                <input type="checkbox">
-                <span class="slider round"></span>
-            </label>     
-        </div>   
+            <div class="information--games-area">
+                <div class="information--games-meaning">
+                    <h2 class="information--games-title">O que são jogos?</h2>
 
-        <section id="game1" class="show">
-           
-            <div class="game--table">
+                    <p class="information--games-paragraph">
+                        Jogo é uma palavra do português com origem na palavra latina "jocus", que pode siginificar gracejo, brincadeira ou divertimento. Atualmente seu principal conceito envolve uma atividade individual ou em grupo, pode ser física ou mental, formulada a partir de um conjunto de regras a partir das quais é possível garantir que haja uma forma de "vencer" e "perder" a atividade. O jogos podem crumprir fins diversos, porém as principais são educacionais e entretenimento.
+                    </p>
 
-                <div class="game1__div flex--col">
-                    
-                    <h1 id="game--title">Kenzie Games</h1>
-                    <span id="game--date">25 de Novembro de 2021</span>
-                    <h3 id="puzzle--title">caça palavras</h3>
-                    
-                    <div class="puzzle--box flex">
-                        <div id="puzzle"></div>
-                        <ul id="words--list">
-                            <li id="words"></li>
-                        </ul>
-                    </div> 
-                    
+                    <p class="information--games-paragraph">
+                         Gostaria de tentar um jogo?
+                    </p>
                 </div>
 
-            </div>    
+                <div class="information--games-meaning">
+                    <h2 class="information--games-title">O caça-palavras:</h2>
+
+                    <p class="information--games-paragraph">
+                        O jogo de caça-palavras, ou sopa de letras, é um passatempo com que consiste em encontrar palavras entre uma grade quadrada ou retangular de letras, aparentemente aletórias.
+                    </p>
+
+                    <p class="information--games-paragraph">
+                        Em suas regras de principais as palavras escondidas podem estar dispostas na horizontal, vertical ou diagonal, com a ordem de leitura da esquerda para a direita (horizontal e diagonal) ou de cima para baixo (vertical).
+                    </p>
+                    
+                    <p class="information--games-paragraph">
+                        O objetivo deste jogo é encontrar todas as palavras escondidas no meio da sopa da forma mais rápida o possível.
+                    </p>
+                </div>
+
+                <div class="information--games-meaning">
+                    <h2 class="information--games-title">O caça-níqueis:</h2>
+    
+                    <p class="information--games-paragraph">
+                        A máquina caça-níqueis, ou slot machine, é um jogo que consiste em pagar com moedas (ou dinheiro) para ter uma chance de jogar em uma máquina. 
+                    </p>
+
+                    <p class="information--games-paragraph">
+                        O jogo consiste na sorte de, ao acionar a máquina, acertar uma sequencia predefinida de figuras que giram e, logo em seguida, param de forma aleatória.
+                    </p>
+
+                    <p class="information--games-paragraph">
+                        Caso o jogador acerte alguma sequência a máquina devolve um prêmio em moedas (ou dinheiro).
+                    </p>
+                </div>
+            </div>  
         </section>
-        
-        <section id="game2" class="hidden">
-            <h2 class="game2__title">&#9734; JackPot &#9734;</h2>
-            <div class="game2__divMain flex">
-                <div class="game2__divMain--second flex">
-                    <div class="machine--background flex">
-                        <div class="game--background--black flex">
-                            <div class="screen--box flex">
-                                <div class="img--background flex">
-                                    <img src="./assets/img/game02/img12.png" alt="" class="div--box--img">
-                                </div>
+
+        <div class="main_games">
+            <div id="switch-games" class="flex--row games--switch">
+                <span id="game-title" class="games--title">Caça-Palavras</span>
+    
+                <label class="games--button">
+                    <input type="checkbox" class="button-input">
+                    <span class="button--slider round"></span>
+                </label>     
+            </div>
+
+            <section id="game1" class="show games--hunting-words">
+                <div class="flex--row hunting-words--floor">
+                    <div class="flex--col hunting-words--table">
+                        <div class="hunting-words--newspapper">
+                            <div class="hunting-words--newspapper-title">
+                                <h2 class="title--text">
+                                    Kenzie Games
+                                </h2>
                             </div>
                             
-                            <div class="screen--box screen--box-mid flex">
-                                <div class="img--background flex">
-                                    <img src="./assets/img/game02/img12.png" alt="" class="div--box--img">
+                            <div class="hunting-words--newspapper-game">
+                                <div class="game-pre">
+                                    <span class="game--data">
+                                        25 de Novembro de 2021
+                                    </span>
+    
+                                    <h3 class="game--title">
+                                        caça palavras
+                                    </h3>
                                 </div>
-                            </div>
+                                <div class="flex--row game-area">
+                                    <div class="game--board">
+                                        
+                                    </div>
+        
+                                    <ul class="game--words">
+                                        <li id="words">
+        
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>   
+                        </div>
+                    </div>
+                </div>    
+            </section>
+            
+            <section id="game2" class="hide games--slot-machine">
+                <h2 class="slot-machine--title">&#9734; JackPot &#9734;</h2>
+                <div class="flex--row slot-machine--outer-frame">
+                    <div class="flex--row slot-machine--lights">
+                        <div class="flex--row slot-machine--inner-frame">
+                            <div class="flex--row slot-machine--screen">
+                                <div class="flex--row slot-machine--screen-slot">
+                                    <img src="./assets/img/caça-níqueis/img1.png" alt="" class="slot--image">
+                                </div>
+                                
+                                <span class="slot-machine--screen-bar">
 
-                            <div class="screen--box flex">
-                                <div class="img--background flex">
-                                    <img src="./assets/img/game02/img12.png" alt="" class="div--box--img">
+                                </span>
+
+                                <div class="flex--row slot-machine--screen-slot">
+                                    <img src="./assets/img/caça-níqueis/img12.png" alt="" class="slot--image">
+                                </div>
+                                
+                                <span class="slot-machine--screen-bar">
+
+                                </span>
+
+                                <div class="flex--row slot-machine--screen-slot">
+                                    <img src="./assets/img/caça-níqueis/img7.png" alt="" class="slot--image">
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
+                    <div class="slot-machine--coupling">
+                        <span id="slot-rod" class="slot-machine--lever-rod">
+                        </span>
+                        <button id="slot-roll" class="slot-machine--lever-grab" type="button">Roll me!</button>
+                    </div>
                 </div>
-                
-                <div class="machine--coupling">
-                    <span class="machine--lever-rod">
-                        <button id="slot-roll" class="machine--lever-grab" type="button">Roll me!</button>
-                    </span>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
     
-    <footer class="footer__main">
-        <p class="footer--autor">Feito por: <span id="leonardo">Leonardo Moraes</span>, <span id="luiz">Luiz Felipe Faria</span> e <span id="paulo">Paulo Lima</span></p>
-        <span class="footer--madeIn"> &#169; Kenzie Academy Brasil - 2021</span> 
+    <footer class="footer">
+        <p class="footer_autor">
+            Feito por: 
+
+            <span id="leonardo">
+                Leonardo Moraes
+            </span>, 
+
+            <span id="luiz">
+                Luiz Felipe Faria
+            </span> e 
+
+            <span id="paulo">
+                Paulo Lima
+            </span>
+        </p>
+
+        <span class="footer_copyright">
+             &#169; Kenzie Academy Brasil - 2021
+        </span> 
     </footer>
 
-    <!-- SOUNDS -->
-            <!-- WORD-SEEKER -->
-            <!-- WORD-SEEKER -->
-
-            <!-- SLOT-MACHINE -->
-                <audio id="standby-slot-machine" src="./assets/sounds/caça-níquel/standby-sound.mp3"></audio>
-                    
-                <audio id="wheelroll-slot-machine" src="./assets/sounds/caça-níquel/wheel-roll-sound.wav"></audio>
-                
-                <audio id="winning-slot-machine" src="./assets/sounds/caça-níquel/winning-sound.wav"></audio>
-            <!-- SLOT-MACHINE -->
-    <!-- SOUNDS -->
 
     <!-- SCRIPTS -->
         <script src="./assets/js/switch-button.js"></script>
         <script src="./assets/js/slot-machine.js"></script>
         <script src="./assets/js/hunting-words.js"></script>
-    <!-- SCRIPTS -->    
+    <!-- SCRIPTS -->
 </body>
 </html>
