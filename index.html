@@ -79,13 +79,35 @@
         </section>
 
         <div class="main_games">
-            <div id="switch-games" class="flex--row games--switch">
-                <span id="game-title" class="games--title">Caça-Palavras</span>
-    
-                <label class="games--button">
-                    <input type="checkbox" class="button-input">
-                    <span class="button--slider round"></span>
-                </label>     
+            <div class="flex--row games--menu">
+                <div id="switch-games" class="flex--row games--switch">
+                    <span id="game-title" class="games--title">
+                        Caça-Palavras
+                    </span>
+        
+                    <label class="games--button">
+                        <input type="checkbox" class="button-input">
+                        <span class="button--slider round"></span>
+                    </label>     
+                </div>
+
+                <div id="switch-sound" class="flex--row games--switch">
+                    <span id="game-sound" class="games--title">
+                        Som Desligado
+                    </span>
+        
+                    <label class="games--button">
+                        <input type="checkbox" class="button-input">
+                        <span class="button--slider round"></span>
+                    </label>     
+                </div>
+
+                <div id="switch-volume" class="flex--row games--switch">
+                    <label class="games--title">Volume</label> 
+
+                    <input id="games--volume-control" type="range" min="0" max="1" step="0.1" />
+                </div>
+
             </div>
 
             <section id="game1" class="show games--hunting-words">
@@ -253,19 +275,27 @@
         <!-- SLOT-MACHINE -->
             <audio id="standby-slot-machine">
                 <source
-                    id="standby-slot-machine"
                     src="./assets/sounds/caça-níqueis/standby-sound.mp3" 
                     type="audio/mp3" />
+            </audio>
+                
 
+            <audio id="wheelroll-slot-machine">
                 <source
-                    id="wheelroll-slot-machine"
-                    src="./assets/sounds/caça-níqueis/wheel-roll-sound.wav" 
-                    type="audio/wav" />
+                    src="./assets/sounds/caça-níqueis/wheel-roll-sound.mp3" 
+                    type="audio/mpeg" />
+            </audio>
 
+            <audio id="winning-slot-machine" >
+                <source    
+                    src="./assets/sounds/caça-níqueis/winning-sound.mp3" 
+                    type="audio/mpeg" />
+            </audio>
+
+            <audio id="losing-slot-machine">
                 <source
-                    id="winning-slot-machine" 
-                    src="./assets/sounds/caça-níqueis/winning-sound.wav" 
-                    type="audio/wav" />
+                    src="./assets/sounds/caça-níqueis/lose-sound.mp3" 
+                    type="audio/mp3" />
             </audio>
         <!-- SLOT-MACHINE -->
     <!-- SOUNDS -->

@@ -1,53 +1,127 @@
-//START imports
-import {winOrLose} from './slot-machine.js';
-//END imports
-
 //START global-variables
     const ambientSound = document.getElementById('ambient-hunting-word');
     const scribbleSound = document.getElementById('scribble-hunting-word');
-    const sourceAmbient = document.getElementById('ambient-hunting-word').children[0].getAttribute('src');
-    const sourceScribe = document.getElementById('scribble-hunting-word').children[0].getAttribute('src');
 
     const standbySound = document.getElementById('standby-slot-machine');
     const wheelRollSound = document.getElementById('wheelroll-slot-machine');
     const winningSound = document.getElementById('winning-slot-machine');
+    const losingSound = document.getElementById('losing-slot-machine');
 //END global-variables
 
 //START sound-effects
-    function mute(){
-
-    };  
-
-    function switchAmbient(target){  
-        if(target.innerText = 'Caça-Plavras'){
-            //Audio-play
-            ambientSound.volume = 0.025;
-            ambientSound.loop;
-            ambientSound.play();
-        }
-    };
-    
-    function switchStandby(){
-        if(target.innerText = 'Caça-Níqueis'){
-            //Audio-play
-            ambientSound.volume = 0.025;
-            ambientSound.loop;
-            ambientSound.play();
-        }
+    function huntingWordsScribble(){
+        scribbleSound.play();
     };
 
-    function switchPlay(event){
-        
+    function slotMachineWin(){
+        winningSound.play();
+    };
+
+    function slotMachineLose(){
+        losingSound.play();
+    };
+
+    function slotMachineRoll(){
+        wheelRollSound.play();
     }
 
+    function switchVolume(event){
+        const volume = event.target
+        const currentVolume = volume.value;
+        
+        if(!ambientSound.paused){
+            ambientSound.volume = currentVolume;
+        }
+
+        else{
+            standbySound.volume = currentVolume;
+        }
+    }
+
+    function switchMusic(event){
+        const slider = event.target;
+        const currentVolume = document.getElementById('games--volume-control').value;
+        const gameTitle = document.getElementById('game-title').innerText;
+        const onOff = document.getElementById('game-sound').innerText;
+
+
+        if(slider.tagName === 'INPUT'){
+            if(onOff === 'Som Ligado'){
+                if(gameTitle === 'Caça-Palavras'){
+                    standbySound.pause();
+                    ambientSound.volume = currentVolume;
+                    ambientSound.loop;
+                    ambientSound.play();
+                }
+    
+                else{
+                    ambientSound.pause();
+                    standbySound.volume = currentVolume;
+                    standbySound.loop;
+                    standbySound.play();
+                }
+            }
+        }
+    }
+
+    function switchOnOff(event){
+        //Variables
+        const slider = event.target;
+        const soundOnOff = document.getElementById('game-sound');
+        const currentVolume = document.getElementById('games--volume-control').value;
+        const gameTitle = document.getElementById('game-title').innerText;
+        const onOff = document.getElementById('game-sound').innerText;
+
+        //Switch-on-off
+        if(slider.tagName === 'INPUT'){
+            if(onOff === 'Som Desligado'){
+                if(gameTitle === 'Caça-Palavras'){
+                    standbySound.pause();
+                    ambientSound.volume = currentVolume;
+                    ambientSound.loop;
+                    ambientSound.play();
+                }
+
+               else{
+                    ambientSound.pause();
+                    standbySound.volume = currentVolume;
+                    standbySound.loop;
+                    standbySound.play();
+                }
+
+                soundOnOff.innerText = 'Som Ligado';
+            }
+
+            else{
+                gameTitle === 'Caça-Palavras' ? ambientSound.pause() : standbySound.pause();
+
+                soundOnOff.innerText = 'Som Desligado';
+            }
+        }
+    }
 //END sound-effects
 
 //START functions-call
-    soundsHuntingWords();
 //END functions-call
 
 //START events-listeners
-    const swBut = document.getElementById('switch-games');
-    
-    swBut.addEventListener('click',switchPlay);
+    const switchGame = document.getElementById('switch-games');
+
+    switchGame.addEventListener('click', switchMusic);
+
+    const switchSound = document.getElementById('switch-sound');
+
+    switchSound.addEventListener('click', switchOnOff);
+
+    const switchVol = document.getElementById('games--volume-control');
+
+    switchVol.addEventListener('input', switchVolume);
+
+    const rollSound = document.getElementById('slot-roll');
+
+    rollSound.addEventListener('click', slotMachineRoll);
 //END events-listeners
+
+//START exports
+    export {slotMachineLose, slotMachineWin, huntingWordsScribble}
+//END exports

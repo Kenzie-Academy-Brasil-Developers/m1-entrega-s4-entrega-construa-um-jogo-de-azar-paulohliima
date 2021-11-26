@@ -1,3 +1,7 @@
+//START imports
+    import { huntingWordsScribble } from "./sound-effects.js";
+//END imports
+
 //START global-variables
 const dictionary = ["BANANA","COMIDA","ABACATE",
 "AMEIXA","ESPINAFRE","LARANJA","ERVILHAS","CENOURA","COGUMELO",
@@ -10,56 +14,56 @@ const tbody = document.createElement("tbody")
 
 //START dynamic-content-main
 
-const verifyWord = (i) =>{
-    let selected = document.querySelectorAll(`.letter-${i}`);
-    // console.log(currentWord);
-    selected.forEach((item) => {
-        item.classList.add("letter--blur");
-        item.removeEventListener("click", () => verifyWord(i)); // VERIFICAR POSSÍVEL ERRO
-    });
-    const wordsFound = [];
-        for(let countLetter = 0; countLetter < selected.length; countLetter++){
-            wordsFound.push(selected[countLetter].innerText);
-    }
-    correctlyWord(wordsFound.join(""));
-}
-
-const correctlyWord = (letterCorrectly) =>{
-    const checkWord = document.getElementsByClassName("game--words")[0];
-    const columnWord1 = document.getElementsByClassName("words--column--01")[0];
-    const columnWord2 = document.getElementsByClassName("words--column--02")[0];
-    const columnWords = document.querySelectorAll(".column--words");
-
-    for(let i = 0; i < columnWords.length; i++){
-        if(columnWords[i].innerText.includes(letterCorrectly)){
-        columnWords[i].classList.add("word-scratched")
-    }else{
-        console.log("Não funcionou")
-    }
-}
-
-    console.log(columnWords[0]);
-    console.log(letterCorrectly);
-    
-}
-const tableWords = () =>{
-    let arrTable = []
-   
-    for(let i = 0; i < 10; i++){
-        arrTable[i] = []
-
-        const colunm = document.createElement("tr")
-        tbody.appendChild(colunm)
-
-        for(let j = 0; j < 10; j++){
-            arrTable[i][j] = [];
-
-            const cell = document.createElement("td")
-            colunm.appendChild(cell)
-
+    const verifyWord = (i) =>{
+        let selected = document.querySelectorAll(`.letter-${i}`);
+        // console.log(currentWord);
+        selected.forEach((item) => {
+            item.classList.add("letter--blur");
+            item.removeEventListener("click", () => verifyWord(i)); // VERIFICAR POSSÍVEL ERRO
+        });
+        const wordsFound = [];
+            for(let countLetter = 0; countLetter < selected.length; countLetter++){
+                wordsFound.push(selected[countLetter].innerText);
         }
         correctlyWord(wordsFound.join(""));
     }
+
+    const correctlyWord = (letterCorrectly) =>{
+        const checkWord = document.getElementsByClassName("game--words")[0];
+        const columnWord1 = document.getElementsByClassName("words--column--01")[0];
+        const columnWord2 = document.getElementsByClassName("words--column--02")[0];
+        const columnWords = document.querySelectorAll(".column--words");
+
+        for(let i = 0; i < columnWords.length; i++){
+            if(columnWords[i].innerText.includes(letterCorrectly)){
+                huntingWordsScribble();
+                columnWords[i].classList.add("word-scratched")
+            }
+            // else{
+            //     console.log("Não funcionou")
+            // }
+        }
+    }
+
+    // const tableWords = () =>{
+    //     let arrTable = []
+    
+    //     for(let i = 0; i < 10; i++){
+    //         arrTable[i] = []
+
+    //         const colunm = document.createElement("tr")
+    //         tbody.appendChild(colunm)
+
+    //         for(let j = 0; j < 10; j++){
+    //             arrTable[i][j] = [];
+
+    //             const cell = document.createElement("td")
+    //             colunm.appendChild(cell)
+
+    //         }
+    //         correctlyWord(wordsFound.join(""));
+    //     }
+    // }
 
     // const correctlyWord = (letterCorrectly) =>{
     //     const checkWord = document.getElementsByClassName("game--words")[0]
@@ -72,6 +76,7 @@ const tableWords = () =>{
     //     console.log(letterCorrectly);
         
     // }
+
     const tableWords = () =>{
         let arrTable = []
     
@@ -148,6 +153,7 @@ const tableWords = () =>{
             }
             
         }
+
         randomLetters(wordsTable);
     }
 
@@ -176,7 +182,4 @@ const tableWords = () =>{
 //START call-functions
 tableWords();
 selectWords();
-//END call-functions
-
-//START event-listeners
-//END event-listeners
+//END call-functions 

@@ -1,3 +1,9 @@
+//START imports
+    import { slotMachineWin } from "./sound-effects.js";
+
+    import { slotMachineLose } from "./sound-effects.js";
+//END imports
+
 //START global-variables
     const buttonGame02 = document.getElementById("slot-roll");
     const leverRod = document.getElementById("slot-rod");
@@ -16,8 +22,6 @@
     const img1 = document.getElementsByClassName("slot--image")[0];
     const img2 = document.getElementsByClassName("slot--image")[1];
     const img3 = document.getElementsByClassName("slot--image")[2];
-
-    
 //END global-variables
 
 //START dynamic-content-main
@@ -35,8 +39,9 @@
             message.classList.toggle('message--roll');
         }
 
-
         if(img1 === img2 && img2 === img3 ){
+            slotMachineWin();
+
             //Class-toggle
             message.classList.toggle('message--win');
             coin1.classList.toggle('animation');
@@ -83,6 +88,8 @@
             );
 
         }else{
+            slotMachineLose();
+
             //Class-toggle
             message.classList.toggle('message--lose');
 
@@ -165,3 +172,7 @@
 //START event-listeners
 buttonGame02.addEventListener("click", imgAnimation);
 //END event-listeners
+
+// START exports
+    
+// END exports
