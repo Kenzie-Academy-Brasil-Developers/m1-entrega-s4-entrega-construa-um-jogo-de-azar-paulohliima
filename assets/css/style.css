@@ -1236,6 +1236,10 @@
                 font-size: 24px;      
             }
 
+            .slot-machine--dispenser{
+                transform: translate(-390px,0px);
+            }
+
             .slot-machine--lever-grab{
                 cursor: pointer;
             }
