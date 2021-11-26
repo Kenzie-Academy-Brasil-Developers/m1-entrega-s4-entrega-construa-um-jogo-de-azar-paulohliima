@@ -1116,6 +1116,10 @@
                 width: 30%;
             }
 
+            .column--words {
+                font-size: 16.5px;
+            }
+
             table{
                 padding-top: 5px;
             }
@@ -1206,6 +1210,10 @@
                 height: 650px;
             }
             
+            .column--words {
+                font-size: 22.5px;
+            }
+
             table{
                 display: flex;
                 justify-content: center;
