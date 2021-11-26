@@ -1,5 +1,5 @@
 //START imports
-    import { huntingWordsScribble } from "./sound-effects.js";
+import { huntingWordsScribble } from "./sound-effects.js";
 //END imports
 
 //START global-variables
@@ -13,7 +13,6 @@ const tbody = document.createElement("tbody")
 //END global-variables
 
 //START dynamic-content-main
-
     const verifyWord = (i) =>{
         let selected = document.querySelectorAll(`.letter-${i}`);
         // console.log(currentWord);
@@ -39,43 +38,8 @@ const tbody = document.createElement("tbody")
                 huntingWordsScribble();
                 columnWords[i].classList.add("word-scratched")
             }
-            // else{
-            //     console.log("Não funcionou")
-            // }
         }
     }
-
-    // const tableWords = () =>{
-    //     let arrTable = []
-    
-    //     for(let i = 0; i < 10; i++){
-    //         arrTable[i] = []
-
-    //         const colunm = document.createElement("tr")
-    //         tbody.appendChild(colunm)
-
-    //         for(let j = 0; j < 10; j++){
-    //             arrTable[i][j] = [];
-
-    //             const cell = document.createElement("td")
-    //             colunm.appendChild(cell)
-
-    //         }
-    //         correctlyWord(wordsFound.join(""));
-    //     }
-    // }
-
-    // const correctlyWord = (letterCorrectly) =>{
-    //     const checkWord = document.getElementsByClassName("game--words")[0]
-    //     const columnWord1 = document.getElementsByClassName("words--column--01")[0]
-    //     const columnWord2 = document.getElementsByClassName("words--column--02")[0]
-
-    //     for()
-
-    //     console.log(columnWord1.innerHTML);
-    //     console.log(letterCorrectly);
-        
-    // }
 
     const tableWords = () =>{
         let arrTable = []
@@ -180,6 +144,6 @@ const tbody = document.createElement("tbody")
 //END dynamic-content-main
 
 //START call-functions
-tableWords();
-selectWords();
-//END call-functions 
+    tableWords();
+    selectWords();
+//END call-functions
