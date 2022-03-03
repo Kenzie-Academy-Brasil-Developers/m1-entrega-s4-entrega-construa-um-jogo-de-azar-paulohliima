@@ -1,1276 +1,1345 @@
 /* START imports */
-    @font-face {
-        font-family: "Fortnite";
-        src: url(/assets/fonts/font-fortnite.ttf);
-    }
+@font-face {
+  font-family: "Fortnite";
+  src: url(../fonts//font-fortnite.ttf);
+}
 
-    @font-face {
-        font-family: "GameCube";
-        src: url(/assets/fonts/GameCube.ttf)
-    }
+@font-face {
+  font-family: "GameCube";
+  src: url(../fonts//GameCube.ttf);
+}
 
-    @font-face {
-        font-family: "White Dream";
-        src: url(/assets/fonts/font-title-jackpot.otf);
-    }
+@font-face {
+  font-family: "White Dream";
+  src: url(../fonts/font-title-jackpot.otf);
+}
 
-    @font-face {
-        font-family: "Cormorant Garamond";
-        src: url(../fonts/CormorantGaramond-Bold.ttf);
-    }
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url(../fonts/CormorantGaramond-Bold.ttf);
+}
 
-    @font-face {
-        font-family: "Architects Daughter";
-        src: url(../fonts/ArchitectsDaughter-Regular.ttf);
-    }
-
-    @import url(./root-variables.css);
+@font-face {
+  font-family: "Architects Daughter";
+  src: url(../fonts/ArchitectsDaughter-Regular.ttf);
+}
 /* END imports */
 
 /* START root-variables */
-    :root{
-        /* START caça-palavra */
-            /* START background & Details */
-            --primary-color-bg-word-seek: #FFE6A7;
-            --secondary-color-bg-word-seek: #BB9457;
-            --primary-color-detail-word-seek: #432818;
-            --secondary-color-detail-word-seek: #6F1D1B;
-            /* END background & Details */
-        /* START caça-palavra */
+:root {
+  /* START caça-palavra */
+  /* START background & Details */
+  --primary-color-bg-word-seek: #ffe6a7;
+  --secondary-color-bg-word-seek: #bb9457;
+  --primary-color-detail-word-seek: #432818;
+  --secondary-color-detail-word-seek: #6f1d1b;
+  /* END background & Details */
+  /* START caça-palavra */
 
-        /* START caça-níqueis */
-            /* START background & Details */
-            --primary-color-bg-slot-machine: #001233;
-            --secondary-color-bg-slot-machine: #001845;
-            --primary-color-detail-slot-machine: #0353A4;
-            --secondary-color-detail-slot-machine: #0466C8;
-            /* END background & Details */
+  /* START caça-níqueis */
+  /* START background & Details */
+  --primary-color-bg-slot-machine: #001233;
+  --secondary-color-bg-slot-machine: #001845;
+  --primary-color-detail-slot-machine: #0353a4;
+  --secondary-color-detail-slot-machine: #0466c8;
+  /* END background & Details */
 
-            /* START neon-box */
-            --primary-box-shadow-neon: inset 0 0 20px #59e2ff, 0 0 20px #59e2ff;
-            --secondary-box-shadow-neon: inset 0 0 20px red, 0 0 20px red;
-            /* END neon-box */
-        /* START caça-níqueis */
-    }
+  /* START neon-box */
+  --primary-box-shadow-neon: inset 0 0 20px #59e2ff, 0 0 20px #59e2ff;
+  --secondary-box-shadow-neon: inset 0 0 20px red, 0 0 20px red;
+  /* END neon-box */
+  /* START caça-níqueis */
+}
 /* END root-variables */
 
 /* START general */
-    .flex--row{
-        display: flex;
-        flex-flow: row wrap;
-    }
-    
-    .flex--col{
-        display: flex;
-        flex-flow: column nowrap;
-    }
+.flex--row {
+  display: flex;
+  flex-flow: row wrap;
+}
 
-    .hide{
-        display: none;
-    }
+.flex--col {
+  display: flex;
+  flex-flow: column nowrap;
+}
 
-    .show{
-        display: block;
-    }
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
 /* END general */
 
 /* START html */
-    html{}
+html {
+}
 /* END html */
 
 /* START body */
-    body{
-        width: 100vw;
-    }
+body {
+  width: 100vw;
+}
 /* END body */
 
 /* START header */
-    .header{
-        align-items: center;
-        justify-content: center;
-        background-color: #3d3f41;
-        width: 100%;
-        height: 90px;
-    }
+.header {
+  align-items: center;
+  justify-content: center;
+  background-color: #3d3f41;
+  width: 100%;
+  height: 90px;
+}
 
-    .header__figure{
-        justify-content: center;
-        align-items: center;
-    }
+.header__figure {
+  justify-content: center;
+  align-items: center;
+}
 
-    .figure--logo-image{
-        width: 60px;
-        height: 60px;   
-    }
+.figure--logo-image {
+  width: 60px;
+  height: 60px;
+}
 
-    .figure--logo-title{
-        font-family: "GameCube", sans-serif;
-        font-weight: bold;
-        font-size: 24px;
-        text-transform: uppercase;
-        color: white;
-        margin-left: 15px;
-    }    
+.figure--logo-title {
+  font-family: "GameCube", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: white;
+  margin-left: 15px;
+}
 /* END header */
 
 /* START main */
-    .main{
-        min-height: 100vh;
-    }
+.main {
+  min-height: 100vh;
+}
 
-    .main__information{
-        font-family: "Fortnite", sans-serif;
-    }
+.main__information {
+  font-family: "Fortnite", sans-serif;
+}
 
-    .information--title-area{}
+.information--title-area {
+}
 
-    .information--title{
-        font-size: 50px;
-        text-align: center;
-        color: #979DAC;
-        margin: 15px 0;
-    }
-    
-    .information--word-play{}
+.information--title {
+  font-size: 50px;
+  text-align: center;
+  color: #979dac;
+  margin: 15px 0;
+}
 
-    .information--word-games{}
+.information--word-play {
+}
 
-    .information--games-area{
-        padding: 5%;
-    }
+.information--word-games {
+}
 
-    .information--games-meaning{}
+.information--games-area {
+  padding: 5%;
+}
 
-    .information--games-title{
-        font-size: 25px;
-        margin-bottom: 15px;
-    }
+.information--games-meaning {
+}
 
-    .information--games-paragraph{
-        letter-spacing: 1.5;
-        line-height: 1.25;
-        margin-bottom: 15px;
-    }
+.information--games-title {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
 
-    .information--games-paragraph:last-child{
-        margin-bottom: 30px;
-    }
+.information--games-paragraph {
+  letter-spacing: 1.5;
+  line-height: 1.25;
+  margin-bottom: 15px;
+}
 
-    .main__mobile{ 
-        padding: 25px 25px;
-    }
+.information--games-paragraph:last-child {
+  margin-bottom: 30px;
+}
 
-    .information--mobile{
-        margin: 30px 0;
-        padding: 0 5%;
-    }
+.main__mobile {
+  padding: 25px 25px;
+}
 
-    .information--mobile-msg{
-        font-family: "Fortnite", sans-serif;
-        font-size: 25px;
-        font-weight: bolder;
-        text-align: center;
-    }
+.information--mobile {
+  margin: 30px 0;
+  padding: 0 5%;
+}
 
-    .main_games{
-        display: none;
-    }
+.information--mobile-msg {
+  font-family: "Fortnite", sans-serif;
+  font-size: 25px;
+  font-weight: bolder;
+  text-align: center;
+}
 
-    .games--menu{
-        justify-content: space-evenly;
-        align-items: center;
-        background-color: #3d3f41;
-        height: 12%;
-    }
+.main_games {
+  display: none;
+}
 
-    .games--hunting-words{
-        width: 100%;
-        height: 90%;
-    }
+.games--menu {
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #3d3f41;
+  height: 12%;
+}
 
-    .hunting-words--floor{
-        justify-content: center;
-        align-items: center;
-        background-image: url(../img/caça-palavras/floor-grantite.jpg);
-        width: 100%;
-        height: 100%;
-    }
+.games--hunting-words {
+  width: 100%;
+  height: 90%;
+}
 
-    .hunting-words--table{
-        justify-content: center;
-        align-items: center;
-        background-image: url(../img/caça-palavras/wood.jpg);
-        border-radius: 10px;
-        width: 97.5%;
-        height: 97.5%;
-    }
+.hunting-words--floor {
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/caça-palavras/floor-grantite.jpg);
+  width: 100%;
+  height: 100%;
+}
 
-    .hunting-words--newspapper{
-        background-image: url(../img/caça-palavras/paper.jpg);
-        width: 95%;
-        height: 90%;
-    }
+.hunting-words--table {
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/caça-palavras/wood.jpg);
+  border-radius: 10px;
+  width: 97.5%;
+  height: 97.5%;
+}
 
-    .hunting-words--newspapper-title{
-        font-family: "Cormorant Garamond", serif;
-        text-align: center;
-        border-bottom: 4px double black;
-        padding: 2% 0;
-        margin: 0 3%;
-    }
+.hunting-words--newspapper {
+  background-image: url(../img/caça-palavras/paper.jpg);
+  width: 95%;
+  height: 90%;
+}
 
-    .title--text{
-        font-size: 25px;
-        font-weight: bold;
-    }
+.hunting-words--newspapper-title {
+  font-family: "Cormorant Garamond", serif;
+  text-align: center;
+  border-bottom: 4px double black;
+  padding: 2% 0;
+  margin: 0 3%;
+}
 
-    .hunting-words--newspapper-game{
-        justify-content: space-between;
-        text-align: center;
-        height: 80%;
-    }
+.title--text {
+  font-size: 25px;
+  font-weight: bold;
+}
 
-    .game-pre{}
+.hunting-words--newspapper-game {
+  justify-content: space-between;
+  text-align: center;
+  height: 80%;
+}
 
-    .game--data{
-        display: block;
-        font-size: 11px;
-        margin-top: 5px;
-    }
+.game-pre {
+}
 
-    .game--title{
-        font-size: 16px;
-        font-family: "Architects Daughter";
-        text-transform: uppercase;
-        margin: 5px 0;
-    }
+.game--data {
+  display: block;
+  font-size: 11px;
+  margin-top: 5px;
+}
 
-    .game-area{
-        justify-content: space-between;
-        margin: 0 20px;
-        height: 74%; 
-    }
+.game--title {
+  font-size: 16px;
+  font-family: "Architects Daughter";
+  text-transform: uppercase;
+  margin: 5px 0;
+}
 
-    .game--board{
-        display: inline-block;
-        margin-left: 20px;
-        border: 2px solid black;
-        width: 60%;
-        height: 100%;
-    }
+.game-area {
+  justify-content: space-between;
+  margin: 0 20px;
+  height: 74%;
+}
 
-    .game--words{
-        display: flex;
-        justify-content: center;
-        margin-right: 20px;
-        border: 2px solid black;
-        width: 30%;
-        height: 100%;
-    }
+.game--board {
+  display: inline-block;
+  margin-left: 20px;
+  border: 2px solid black;
+  width: 60%;
+  height: 100%;
+}
 
-    table{
-        display: flex;
-        justify-content: center;
-    }
+.game--words {
+  display: flex;
+  justify-content: center;
+  margin-right: 20px;
+  border: 2px solid black;
+  width: 30%;
+  height: 100%;
+}
 
-    tr{
-        font-family: "Architects Daughter";
-        display: flex;
-        justify-content: space-around;
-        width: 50vw;
-        height: 4.2vh;
-    }
-    
-    td{
-        cursor: pointer;
-    }
+table {
+  display: flex;
+  justify-content: center;
+}
 
-    .letter--blur{
-        font-weight: bold;
-        text-decoration: underline;
-        opacity: 50%;
-    }
+tr {
+  font-family: "Architects Daughter";
+  display: flex;
+  justify-content: space-around;
+  width: 50vw;
+  height: 4.2vh;
+}
 
-    .column--words{
-        font-family: "Architects Daughter";
-        font-size: 11.5px;      
-    }
-    .word-scratched{
-        text-decoration: line-through;
-        opacity: 80%;
-    }
-    
-    .words--column--01{
-        width: 49%;
-        margin-top: 5px;
-    }
+td {
+  cursor: pointer;
+}
 
-    .words--column--02{
-        width: 49%;
-        margin-top: 5px;
-    }
+.letter--blur {
+  font-weight: bold;
+  text-decoration: underline;
+  opacity: 50%;
+}
 
-    .games--slot-machine{
-        background-color: var(--primary-color-bg-slot-machine);
-        width: 100%;
-        height: 90%;
-    }
+.column--words {
+  font-family: "Architects Daughter";
+  font-size: 11.5px;
+}
+.word-scratched {
+  text-decoration: line-through;
+  opacity: 80%;
+}
 
-    .slot-machine--title{
-        text-align: center;
-        color: yellow;
-        font-size: 30px;  
-        font-family: "White Dream", serif;
-        text-shadow: 0 0 15px #FFF, 0 0 20px yellow, 0 0 30px yellow, 0 0 40px #49FF18;
-        padding-top: 2.5%;
-        animation: light-blink ease-in 5s infinite;
+.words--column--01 {
+  width: 49%;
+  margin-top: 5px;
+}
 
-    }
+.words--column--02 {
+  width: 49%;
+  margin-top: 5px;
+}
 
-    .slot-machine--outer-frame{
-        position: relative;
-        align-items: center;
-        justify-content: center;
-        width: 350px;
-        height: 200px;
-        border: 5px solid #59e2ff;
-        box-shadow: var(--primary-box-shadow-neon);
-        border-radius: 35%;
-        margin: 0 auto;
-        margin-top: 15px;
-    }
-    
-    .slot-machine--dispenser{
-        position: absolute;
-        transform: translate(-215px,0px);
-        border: 5px solid #59e2ff;
-        border-top-left-radius: 30px;
-        border-bottom-left-radius: 30px;
-        box-shadow: var(--primary-box-shadow-neon);
-        height: 75px;
-        width: 68px;
-    }
+.games--slot-machine {
+  background-color: var(--primary-color-bg-slot-machine);
+  width: 100%;
+  height: 90%;
+}
 
-    .slot-machine--message{
-        position: absolute;
-        transform: translate(9px,6px);
-        text-align: center;
-        font-family: "White Dream", serif;
-        font-weight: bold;
-        font-size: 12px;
-        border: 2.5px solid #59e2ff;
-        border-radius: 10px;
-        padding-top: 5px;
-        width: 45px;
-        height: 20px;
-    }
+.slot-machine--title {
+  text-align: center;
+  color: yellow;
+  font-size: 30px;
+  font-family: "White Dream", serif;
+  text-shadow: 0 0 15px #fff, 0 0 20px yellow, 0 0 30px yellow, 0 0 40px #49ff18;
+  padding-top: 2.5%;
+  animation: light-blink ease-in 5s infinite;
+}
 
-    .message--roll{
-        color: white;
-        text-shadow: 0 0 15px #fff, 0 0 20px slategray, 0 0 30px slategray, 0 0 40px #fff;
-    }
+.slot-machine--outer-frame {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  height: 200px;
+  border: 5px solid #59e2ff;
+  box-shadow: var(--primary-box-shadow-neon);
+  border-radius: 35%;
+  margin: 0 auto;
+  margin-top: 15px;
+}
 
-    .message--win{
-        color: yellow;
-        text-shadow: 0 0 15px #fff, 0 0 20px yellow, 0 0 30px yellow, 0 0 40px #49ff18;
-    }
+.slot-machine--dispenser {
+  position: absolute;
+  transform: translate(-215px, 0px);
+  border: 5px solid #59e2ff;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  box-shadow: var(--primary-box-shadow-neon);
+  height: 75px;
+  width: 68px;
+}
 
-    .message--lose{
-        color: red;
-        text-shadow: 0 0 15px yellow, 0 0 20px red, 0 0 30px red, 0 0 40px orangered;
-    }
+.slot-machine--message {
+  position: absolute;
+  transform: translate(9px, 6px);
+  text-align: center;
+  font-family: "White Dream", serif;
+  font-weight: bold;
+  font-size: 12px;
+  border: 2.5px solid #59e2ff;
+  border-radius: 10px;
+  padding-top: 5px;
+  width: 45px;
+  height: 20px;
+}
 
-    .slot-machine--hole{
-        position: absolute;
-        transform: translate(12px,30px) rotateX(0.15turn);
-        background-color: black;
-        border: 5px solid gray;
-        border-bottom-left-radius: 30px;
-        border-bottom-right-radius: 30px;
-        box-shadow: inset 0 0 20px slategray, 0 0 20px slategrey;
-        height: 35px;
-        width: 35px;
-    }
+.message--roll {
+  color: white;
+  text-shadow: 0 0 15px #fff, 0 0 20px slategray, 0 0 30px slategray,
+    0 0 40px #fff;
+}
 
-    .slot-machine--coin{
-        position: absolute;
-        transform: translate(2px,-5px);
-        font-family: "White Dream", serif;
-        font-size: 25px;
-        text-align: center;
-        box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
-        text-shadow: 0 0 15px transparent, 0 0 20px transparent, 0 0 30px transparent, 0 0 40px transparent;
-        color: transparent;
-        border: 1px solid transparent;
-        border-radius: 100%;
-        width: 30px;
-        height: 40px;
-    }
-    
-    #coin1.animation{
-        animation-name: coin1-animation;
-        animation-duration: 2s;
-        transition: all 0.5s ease;
-    }
+.message--win {
+  color: yellow;
+  text-shadow: 0 0 15px #fff, 0 0 20px yellow, 0 0 30px yellow, 0 0 40px #49ff18;
+}
 
-    #coin2.animation{
-        animation-name: coin2-animation;
-        animation-duration: 2s;
-        transition: all 0.5s ease;
-    }
+.message--lose {
+  color: red;
+  text-shadow: 0 0 15px yellow, 0 0 20px red, 0 0 30px red, 0 0 40px orangered;
+}
 
-    #coin3.animation{
-        animation-name: coin3-animation;
-        animation-duration: 2s;
-        transition: all 0.5s ease;
-    }
+.slot-machine--hole {
+  position: absolute;
+  transform: translate(12px, 30px) rotateX(0.15turn);
+  background-color: black;
+  border: 5px solid gray;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: inset 0 0 20px slategray, 0 0 20px slategrey;
+  height: 35px;
+  width: 35px;
+}
 
-    #coin4.animation{
-        animation-name: coin4-animation;
-        animation-duration: 2s;
-        transition: all 0.5s ease;
-    }
+.slot-machine--coin {
+  position: absolute;
+  transform: translate(2px, -5px);
+  font-family: "White Dream", serif;
+  font-size: 25px;
+  text-align: center;
+  box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
+  text-shadow: 0 0 15px transparent, 0 0 20px transparent, 0 0 30px transparent,
+    0 0 40px transparent;
+  color: transparent;
+  border: 1px solid transparent;
+  border-radius: 100%;
+  width: 30px;
+  height: 40px;
+}
 
-    #coin5.animation{
-        animation-name: coin5-animation;
-        animation-duration: 2s;
-        transition: all 0.5s ease;
-    }
+#coin1.animation {
+  animation-name: coin1-animation;
+  animation-duration: 2s;
+  transition: all 0.5s ease;
+}
 
-    #coin6.animation{
-        animation-name: coin6-animation;
-        animation-duration: 2s;
-        transition: all 0.5s ease;
-    }
+#coin2.animation {
+  animation-name: coin2-animation;
+  animation-duration: 2s;
+  transition: all 0.5s ease;
+}
 
-    #coin7.animation{
-        animation-name: coin7-animation;
-        animation-duration: 2s;
-        transition: all 0.5s ease;
-    }
+#coin3.animation {
+  animation-name: coin3-animation;
+  animation-duration: 2s;
+  transition: all 0.5s ease;
+}
 
-    #coin8.animation{
-        animation-name: coin8-animation;
-        animation-duration: 2s;
-        transition: all 0.5s ease;
-    }
+#coin4.animation {
+  animation-name: coin4-animation;
+  animation-duration: 2s;
+  transition: all 0.5s ease;
+}
 
-    #coin9.animation{
-        animation-name: coin9-animation;
-        animation-duration: 2s;
-        transition: all 0.5s ease;
-    }
+#coin5.animation {
+  animation-name: coin5-animation;
+  animation-duration: 2s;
+  transition: all 0.5s ease;
+}
 
-    #coin10.animation{
-        animation-name: coin10-animation;
-        animation-duration: 2s;
-        transition: all 0.5s ease;
-    }
+#coin6.animation {
+  animation-name: coin6-animation;
+  animation-duration: 2s;
+  transition: all 0.5s ease;
+}
 
-    .slot-machine--lights{
-        position: relative;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto;
-        border-radius: 28%;
-        width: 295px;
-        height: 150px;
-        overflow: hidden;
-    }
-    .slot-machine--lights::before{
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100px;
-        background: yellow;
-        animation: light-animation 2s linear infinite;
-    }
-    .slot-machine--lights::after{
-        content: "";
-        position: sticky;
-        background: var(--primary-color-bg-slot-machine);
-        inset: 4px;
-        width: 97%;
-        height: 95%;
-        border-radius: 28%;
-    }
+#coin7.animation {
+  animation-name: coin7-animation;
+  animation-duration: 2s;
+  transition: all 0.5s ease;
+}
 
-    .slot-machine--inner-frame{
-        align-items: center;
-        justify-content: center;
-        box-shadow: var(--primary-box-shadow-neon);
-        border: 5px solid #59e2ff;
-        border-radius: 80px;
-        width: 250px;
-        height: 100px;
-        position: absolute;
-        z-index: 1;
-        background: var(--primary-color-bg-slot-machine);
-    }
+#coin8.animation {
+  animation-name: coin8-animation;
+  animation-duration: 2s;
+  transition: all 0.5s ease;
+}
 
-    .slot-machine--screen{
-        align-items: center;
-        justify-content: space-evenly;
-        width: 95%;
-        height: 65%;
-    }
+#coin9.animation {
+  animation-name: coin9-animation;
+  animation-duration: 2s;
+  transition: all 0.5s ease;
+}
 
-    .slot-machine--screen-slot{
-        justify-content: center;
-        align-items: center;
-        width: 60px;
-        height: 60px;
-    }
+#coin10.animation {
+  animation-name: coin10-animation;
+  animation-duration: 2s;
+  transition: all 0.5s ease;
+}
 
-    .slot--image{
-        width: 100%;
-        height: 100%;
-    }
+.slot-machine--lights {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 28%;
+  width: 295px;
+  height: 150px;
+  overflow: hidden;
+}
+.slot-machine--lights::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  background: yellow;
+  animation: light-animation 2s linear infinite;
+}
+.slot-machine--lights::after {
+  content: "";
+  position: sticky;
+  background: var(--primary-color-bg-slot-machine);
+  inset: 4px;
+  width: 97%;
+  height: 95%;
+  border-radius: 28%;
+}
 
-    .slot-machine--screen-bar{
-        box-shadow: var(--primary-box-shadow-neon);
-        border: 2.5px solid #59e2ff;
-        border-radius: 10px;
-        height: 75%;
-    }
+.slot-machine--inner-frame {
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--primary-box-shadow-neon);
+  border: 5px solid #59e2ff;
+  border-radius: 80px;
+  width: 250px;
+  height: 100px;
+  position: absolute;
+  z-index: 1;
+  background: var(--primary-color-bg-slot-machine);
+}
 
-    .slot-machine--coupling{
-        position: absolute;
-        transform: translate(205px,0);
-        border: 5px solid #59e2ff;
-        border-radius: 10%;
-        box-shadow: var(--primary-box-shadow-neon);
-        width: 50px;
-        height: 60px;
-    }
+.slot-machine--screen {
+  align-items: center;
+  justify-content: space-evenly;
+  width: 95%;
+  height: 65%;
+}
 
-    .slot-machine--lever-rod{
-        position: absolute;
-        transform-origin: bottom center;
-        transform: translate(10px,-75px);
-        border: 5px solid #59e2ff;
-        border-radius: 30px;
-        box-shadow: var(--primary-box-shadow-neon);
-        width: 25px;
-        height: 100px;
-    }
-    
-    .slot-machine--lever-rod.animation{
-        animation-name: rod-animation;
-        animation-duration: 1s;
-        animation-delay: 0.25s;
-        animation-iteration-count: 2;
-        animation-direction: alternate;
-    }
-    
-    .slot-machine--lever-grab{
-        position: absolute;
-        transform: translate(-5px,-115px);
-        font-family: "White Dream", serif;
-        font-size: 10px;
-        font-weight: 700;
-        text-shadow:  0 0 15px red, 0 0 20px red, 0 0 30px red, 0 0 40px red, 0 0 55px red, 0 0 75px red;
-        background: var(--primary-color-bg-slot-machine);
-        color: red;
-        border: 5px solid red;
-        border-radius: 100%;
-        box-shadow: var(--secondary-box-shadow-neon);
-        width: 65px;
-        height: 65px;
-    }
+.slot-machine--screen-slot {
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+}
 
-    .slot-machine--lever-grab.animation{
-        box-shadow: inset 0 0 20px red, 0 0 40px red, 0 0 55px red;
-        animation-name: grab-animation;
-        animation-duration: 1s;
-        animation-delay: 0.25s;
-        animation-iteration-count: 2;
-        animation-direction: alternate;
-    }
+.slot--image {
+  width: 100%;
+  height: 100%;
+}
+
+.slot-machine--screen-bar {
+  box-shadow: var(--primary-box-shadow-neon);
+  border: 2.5px solid #59e2ff;
+  border-radius: 10px;
+  height: 75%;
+}
+
+.slot-machine--coupling {
+  position: absolute;
+  transform: translate(205px, 0);
+  border: 5px solid #59e2ff;
+  border-radius: 10%;
+  box-shadow: var(--primary-box-shadow-neon);
+  width: 50px;
+  height: 60px;
+}
+
+.slot-machine--lever-rod {
+  position: absolute;
+  transform-origin: bottom center;
+  transform: translate(10px, -75px);
+  border: 5px solid #59e2ff;
+  border-radius: 30px;
+  box-shadow: var(--primary-box-shadow-neon);
+  width: 25px;
+  height: 100px;
+}
+
+.slot-machine--lever-rod.animation {
+  animation-name: rod-animation;
+  animation-duration: 1s;
+  animation-delay: 0.25s;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+}
+
+.slot-machine--lever-grab {
+  position: absolute;
+  transform: translate(-5px, -115px);
+  font-family: "White Dream", serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-shadow: 0 0 15px red, 0 0 20px red, 0 0 30px red, 0 0 40px red,
+    0 0 55px red, 0 0 75px red;
+  background: var(--primary-color-bg-slot-machine);
+  color: red;
+  border: 5px solid red;
+  border-radius: 100%;
+  box-shadow: var(--secondary-box-shadow-neon);
+  width: 65px;
+  height: 65px;
+}
+
+.slot-machine--lever-grab.animation {
+  box-shadow: inset 0 0 20px red, 0 0 40px red, 0 0 55px red;
+  animation-name: grab-animation;
+  animation-duration: 1s;
+  animation-delay: 0.25s;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+}
 /* END main */
 
 /* START footer */
-        .footer{
-            font-family: "Fortnite",sans-serif;
-            font-size: 16px;
-            text-align: center;
-            letter-spacing: 1.5px;
-            line-height: 1.25;
-            background-color: #3d3f41;
-            color: white;
-            padding: 10px;
-            max-width: 100%;
-        }
+.footer {
+  font-family: "Fortnite", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 1.5px;
+  line-height: 1.25;
+  background-color: #3d3f41;
+  color: white;
+  padding: 10px;
+  max-width: 100%;
+}
 
-        .footer_autor{
-            margin-bottom: 10px;
-            padding: 5px;
-        }
+.footer_autor {
+  margin-bottom: 10px;
+  padding: 5px;
+}
 
-        .footer_copyright{}
+.footer_copyright {
+}
 /* END footer */
 
 /* START extras */
-    /* START switch */
-        .games--switch{
-            justify-content: center;
-            align-items: center;
-            width: 33.333%;
-        }
+/* START switch */
+.games--switch {
+  justify-content: center;
+  align-items: center;
+  width: 33.333%;
+}
 
-        .games--title{
-            font-family: "Fortnite", sans-serif;
-            font-size: 20px;
-            color: white;
-            margin-right: 15px;
-        }
-        
-        .games--button {
-            position: relative;
-            display: inline-block;
-            width: 60px;
-            height: 34px;
-        }
-        
-        .button-input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-        
-        .button--slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            -webkit-transition: .4s;
-            transition: .4s;
-        }
-        
-        .button--slider:before {
-            position: absolute;
-            content: "";
-            height: 26px;
-            width: 26px;
-            left: 4px;
-            bottom: 4px;
-            background-color: white;
-            -webkit-transition: .4s;
-            transition: .4s;
-        }
-        
-        .button-input:checked + .button--slider {
-            background-color: #2196F3;
-        }
-        
-        .button-input:focus + .button--slider {
-            box-shadow: 0 0 1px #2196F3;
-        }
-        
-        .button-input:checked + .button--slider:before {
-            -webkit-transform: translateX(26px);
-            -ms-transform: translateX(26px);
-            transform: translateX(26px);
-        }
-        
-        .button--slider.round {
-            border-radius: 34px;
-        }
-        
-        .button--slider.round:before {
-            border-radius: 50%;
-        }
-    /* END switch */
+.games--title {
+  font-family: "Fortnite", sans-serif;
+  font-size: 20px;
+  color: white;
+  margin-right: 15px;
+}
 
-    /* START coins-animations */
-        @keyframes coin1-animation {
-            0% {
-                transform: translate(2px,-5px);
-                box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
-                text-shadow: 0 0 15px transparent, 0 0 20px transparent, 0 0 30px transparent, 0 0 40px transparent;
-                color: transparent;
-                border: 1px solid transparent;
-            }
+.games--button {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
 
-            50% {
-                transform: translate(2px,-200px);
-                position: absolute;
-                box-shadow: inset 0 0 2px yellow, 0 0 4px yellow;
-                text-shadow: 0 0 15px #fff, 0 0 20px yellow, 0 0 30px yellow, 0 0 40px #49ff18;
-                color: yellow;
-                border: 1px solid yellow;
-            }
+.button-input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
 
-            100% {
-                transform: translate(2px,-200px);
-                box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
-                text-shadow: 0 0 15px transparent, 0 0 20px transparent, 0 0 30px transparent, 0 0 40px transparent;
-                color: transparent;
-                border: 1px solid transparent;
-            }
-        }
+.button--slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
 
-        @keyframes coin2-animation {
-            0% {
-                transform: translate(2px,-5px);
-                box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
-                text-shadow: 0 0 15px transparent, 0 0 20px transparent, 0 0 30px transparent, 0 0 40px transparent;
-                color: transparent;
-                border: 1px solid transparent;
-            }
+.button--slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
 
-            50% {
-                transform: translate(161px,30px);
-                position: absolute;
-                box-shadow: inset 0 0 2px yellow, 0 0 4px yellow;
-                text-shadow: 0 0 15px #fff, 0 0 20px yellow, 0 0 30px yellow, 0 0 40px #49ff18;
-                color: yellow;
-                border: 1px solid yellow;
-            }
+.button-input:checked + .button--slider {
+  background-color: #2196f3;
+}
 
-            100% {
-                transform: translate(161px,30px);
-                box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
-                text-shadow: 0 0 15px transparent, 0 0 20px transparent, 0 0 30px transparent, 0 0 40px transparent;
-                color: transparent;
-                border: 1px solid transparent;
-            }
-        }
-        
-        @keyframes coin3-animation {
-            0% {
-                transform: translate(2px,-5px);
-                box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
-                text-shadow: 0 0 15px transparent, 0 0 20px transparent, 0 0 30px transparent, 0 0 40px transparent;
-                color: transparent;
-                border: 1px solid transparent;
-            }
+.button-input:focus + .button--slider {
+  box-shadow: 0 0 1px #2196f3;
+}
 
-            50% {
-                transform: translate(-83px,-135px);
-                position: absolute;
-                box-shadow: inset 0 0 2px yellow, 0 0 4px yellow;
-                text-shadow: 0 0 15px #fff, 0 0 20px yellow, 0 0 30px yellow, 0 0 40px #49ff18;
-                color: yellow;
-                border: 1px solid yellow;
-            }
+.button-input:checked + .button--slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
 
-            100% {
-                transform: translate(-83px,-135px);
-                box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
-                text-shadow: 0 0 15px transparent, 0 0 20px transparent, 0 0 30px transparent, 0 0 40px transparent;
-                color: transparent;
-                border: 1px solid transparent;
-            }
-        }
+.button--slider.round {
+  border-radius: 34px;
+}
 
-        @keyframes coin4-animation {
-            0% {
-                transform: translate(2px,-5px);
-                box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
-                text-shadow: 0 0 15px transparent, 0 0 20px transparent, 0 0 30px transparent, 0 0 40px transparent;
-                color: transparent;
-                border: 1px solid transparent;
-            }
+.button--slider.round:before {
+  border-radius: 50%;
+}
+/* END switch */
 
-            50% {
-                transform: translate(150px,-100px);
-                position: absolute;
-                box-shadow: inset 0 0 2px yellow, 0 0 4px yellow;
-                text-shadow: 0 0 15px #fff, 0 0 20px yellow, 0 0 30px yellow, 0 0 40px #49ff18;
-                color: yellow;
-                border: 1px solid yellow;
-            }
+/* START coins-animations */
+@keyframes coin1-animation {
+  0% {
+    transform: translate(2px, -5px);
+    box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
+    text-shadow: 0 0 15px transparent, 0 0 20px transparent,
+      0 0 30px transparent, 0 0 40px transparent;
+    color: transparent;
+    border: 1px solid transparent;
+  }
 
-            100% {
-                transform: translate(150px,-100px);
-                box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
-                text-shadow: 0 0 15px transparent, 0 0 20px transparent, 0 0 30px transparent, 0 0 40px transparent;
-                color: transparent;
-                border: 1px solid transparent;
-            }
-        }
+  50% {
+    transform: translate(2px, -200px);
+    position: absolute;
+    box-shadow: inset 0 0 2px yellow, 0 0 4px yellow;
+    text-shadow: 0 0 15px #fff, 0 0 20px yellow, 0 0 30px yellow,
+      0 0 40px #49ff18;
+    color: yellow;
+    border: 1px solid yellow;
+  }
 
-        @keyframes coin5-animation {
-            0% {
-                transform: translate(2px,-5px);
-                box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
-                text-shadow: 0 0 15px transparent, 0 0 20px transparent, 0 0 30px transparent, 0 0 40px transparent;
-                color: transparent;
-                border: 1px solid transparent;
-            }
+  100% {
+    transform: translate(2px, -200px);
+    box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
+    text-shadow: 0 0 15px transparent, 0 0 20px transparent,
+      0 0 30px transparent, 0 0 40px transparent;
+    color: transparent;
+    border: 1px solid transparent;
+  }
+}
 
-            50% {
-                transform: translate(-55px,75px);
-                position: absolute;
-                box-shadow: inset 0 0 2px yellow, 0 0 4px yellow;
-                text-shadow: 0 0 15px #fff, 0 0 20px yellow, 0 0 30px yellow, 0 0 40px #49ff18;
-                color: yellow;
-                border: 1px solid yellow;
-            }
+@keyframes coin2-animation {
+  0% {
+    transform: translate(2px, -5px);
+    box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
+    text-shadow: 0 0 15px transparent, 0 0 20px transparent,
+      0 0 30px transparent, 0 0 40px transparent;
+    color: transparent;
+    border: 1px solid transparent;
+  }
 
-            100% {
-                transform: translate(-55px,75px);
-                box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
-                text-shadow: 0 0 15px transparent, 0 0 20px transparent, 0 0 30px transparent, 0 0 40px transparent;
-                color: transparent;
-                border: 1px solid transparent;
-            }
-        }
+  50% {
+    transform: translate(161px, 30px);
+    position: absolute;
+    box-shadow: inset 0 0 2px yellow, 0 0 4px yellow;
+    text-shadow: 0 0 15px #fff, 0 0 20px yellow, 0 0 30px yellow,
+      0 0 40px #49ff18;
+    color: yellow;
+    border: 1px solid yellow;
+  }
 
-        @keyframes coin6-animation {
-            0% {
-                transform: translate(2px,-5px);
-                box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
-                text-shadow: 0 0 15px transparent, 0 0 20px transparent, 0 0 30px transparent, 0 0 40px transparent;
-                color: transparent;
-                border: 1px solid transparent;
-            }
+  100% {
+    transform: translate(161px, 30px);
+    box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
+    text-shadow: 0 0 15px transparent, 0 0 20px transparent,
+      0 0 30px transparent, 0 0 40px transparent;
+    color: transparent;
+    border: 1px solid transparent;
+  }
+}
 
-            50% {
-                transform: translate(100px,40px);
-                position: absolute;
-                box-shadow: inset 0 0 2px yellow, 0 0 4px yellow;
-                text-shadow: 0 0 15px #fff, 0 0 20px yellow, 0 0 30px yellow, 0 0 40px #49ff18;
-                color: yellow;
-                border: 1px solid yellow;
-            }
+@keyframes coin3-animation {
+  0% {
+    transform: translate(2px, -5px);
+    box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
+    text-shadow: 0 0 15px transparent, 0 0 20px transparent,
+      0 0 30px transparent, 0 0 40px transparent;
+    color: transparent;
+    border: 1px solid transparent;
+  }
 
-            100% {
-                transform: translate(100px,40px);
-                box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
-                text-shadow: 0 0 15px transparent, 0 0 20px transparent, 0 0 30px transparent, 0 0 40px transparent;
-                color: transparent;
-                border: 1px solid transparent;
-            }
-        }
+  50% {
+    transform: translate(-83px, -135px);
+    position: absolute;
+    box-shadow: inset 0 0 2px yellow, 0 0 4px yellow;
+    text-shadow: 0 0 15px #fff, 0 0 20px yellow, 0 0 30px yellow,
+      0 0 40px #49ff18;
+    color: yellow;
+    border: 1px solid yellow;
+  }
 
-        @keyframes coin7-animation {
-            0% {
-                transform: translate(2px,-5px);
-                box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
-                text-shadow: 0 0 15px transparent, 0 0 20px transparent, 0 0 30px transparent, 0 0 40px transparent;
-                color: transparent;
-                border: 1px solid transparent;
-            }
+  100% {
+    transform: translate(-83px, -135px);
+    box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
+    text-shadow: 0 0 15px transparent, 0 0 20px transparent,
+      0 0 30px transparent, 0 0 40px transparent;
+    color: transparent;
+    border: 1px solid transparent;
+  }
+}
 
-            50% {
-                transform: translate(2px,150px);
-                position: absolute;
-                box-shadow: inset 0 0 2px yellow, 0 0 4px yellow;
-                text-shadow: 0 0 15px #fff, 0 0 20px yellow, 0 0 30px yellow, 0 0 40px #49ff18;
-                color: yellow;
-                border: 1px solid yellow;
-            }
+@keyframes coin4-animation {
+  0% {
+    transform: translate(2px, -5px);
+    box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
+    text-shadow: 0 0 15px transparent, 0 0 20px transparent,
+      0 0 30px transparent, 0 0 40px transparent;
+    color: transparent;
+    border: 1px solid transparent;
+  }
 
-            100% {
-                transform: translate(2px,150px);
-                box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
-                text-shadow: 0 0 15px transparent, 0 0 20px transparent, 0 0 30px transparent, 0 0 40px transparent;
-                color: transparent;
-                border: 1px solid transparent;
-            }
-        }
+  50% {
+    transform: translate(150px, -100px);
+    position: absolute;
+    box-shadow: inset 0 0 2px yellow, 0 0 4px yellow;
+    text-shadow: 0 0 15px #fff, 0 0 20px yellow, 0 0 30px yellow,
+      0 0 40px #49ff18;
+    color: yellow;
+    border: 1px solid yellow;
+  }
 
-        @keyframes coin8-animation {
-            0% {
-                transform: translate(2px,-5px);
-                box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
-                text-shadow: 0 0 15px transparent, 0 0 20px transparent, 0 0 30px transparent, 0 0 40px transparent;
-                color: transparent;
-                border: 1px solid transparent;
-            }
+  100% {
+    transform: translate(150px, -100px);
+    box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
+    text-shadow: 0 0 15px transparent, 0 0 20px transparent,
+      0 0 30px transparent, 0 0 40px transparent;
+    color: transparent;
+    border: 1px solid transparent;
+  }
+}
 
-            50% {
-                transform: translate(-103px,44px);
-                position: absolute;
-                box-shadow: inset 0 0 2px yellow, 0 0 4px yellow;
-                text-shadow: 0 0 15px #fff, 0 0 20px yellow, 0 0 30px yellow, 0 0 40px #49ff18;
-                color: yellow;
-                border: 1px solid yellow;
-            }
+@keyframes coin5-animation {
+  0% {
+    transform: translate(2px, -5px);
+    box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
+    text-shadow: 0 0 15px transparent, 0 0 20px transparent,
+      0 0 30px transparent, 0 0 40px transparent;
+    color: transparent;
+    border: 1px solid transparent;
+  }
 
-            100% {
-                transform: translate(-103px,44px);
-                box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
-                text-shadow: 0 0 15px transparent, 0 0 20px transparent, 0 0 30px transparent, 0 0 40px transparent;
-                color: transparent;
-                border: 1px solid transparent;
-            }
-        }
+  50% {
+    transform: translate(-55px, 75px);
+    position: absolute;
+    box-shadow: inset 0 0 2px yellow, 0 0 4px yellow;
+    text-shadow: 0 0 15px #fff, 0 0 20px yellow, 0 0 30px yellow,
+      0 0 40px #49ff18;
+    color: yellow;
+    border: 1px solid yellow;
+  }
 
-        @keyframes coin9-animation {
-            0% {
-                transform: translate(2px,-5px);
-                box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
-                text-shadow: 0 0 15px transparent, 0 0 20px transparent, 0 0 30px transparent, 0 0 40px transparent;
-                color: transparent;
-                border: 1px solid transparent;
-            }
+  100% {
+    transform: translate(-55px, 75px);
+    box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
+    text-shadow: 0 0 15px transparent, 0 0 20px transparent,
+      0 0 30px transparent, 0 0 40px transparent;
+    color: transparent;
+    border: 1px solid transparent;
+  }
+}
 
-            50% {
-                transform: translate(2px,-70px);
-                position: absolute;
-                box-shadow: inset 0 0 2px yellow, 0 0 4px yellow;
-                text-shadow: 0 0 15px #fff, 0 0 20px yellow, 0 0 30px yellow, 0 0 40px #49ff18;
-                color: yellow;
-                border: 1px solid yellow;
-            }
+@keyframes coin6-animation {
+  0% {
+    transform: translate(2px, -5px);
+    box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
+    text-shadow: 0 0 15px transparent, 0 0 20px transparent,
+      0 0 30px transparent, 0 0 40px transparent;
+    color: transparent;
+    border: 1px solid transparent;
+  }
 
-            100% {
-                transform: translate(2px,-70px);
-                box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
-                text-shadow: 0 0 15px transparent, 0 0 20px transparent, 0 0 30px transparent, 0 0 40px transparent;
-                color: transparent;
-                border: 1px solid transparent;
-            }
-        }
+  50% {
+    transform: translate(100px, 40px);
+    position: absolute;
+    box-shadow: inset 0 0 2px yellow, 0 0 4px yellow;
+    text-shadow: 0 0 15px #fff, 0 0 20px yellow, 0 0 30px yellow,
+      0 0 40px #49ff18;
+    color: yellow;
+    border: 1px solid yellow;
+  }
 
-        @keyframes coin10-animation {
-            0% {
-                transform: translate(2px,-5px);
-                box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
-                text-shadow: 0 0 15px transparent, 0 0 20px transparent, 0 0 30px transparent, 0 0 40px transparent;
-                color: transparent;
-                border: 1px solid transparent;
-            }
+  100% {
+    transform: translate(100px, 40px);
+    box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
+    text-shadow: 0 0 15px transparent, 0 0 20px transparent,
+      0 0 30px transparent, 0 0 40px transparent;
+    color: transparent;
+    border: 1px solid transparent;
+  }
+}
 
-            50% {
-                transform: translate(-3px,76px);
-                position: absolute;
-                box-shadow: inset 0 0 2px yellow, 0 0 4px yellow;
-                text-shadow: 0 0 15px #fff, 0 0 20px yellow, 0 0 30px yellow, 0 0 40px #49ff18;
-                color: yellow;
-                border: 1px solid yellow;
-            }
+@keyframes coin7-animation {
+  0% {
+    transform: translate(2px, -5px);
+    box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
+    text-shadow: 0 0 15px transparent, 0 0 20px transparent,
+      0 0 30px transparent, 0 0 40px transparent;
+    color: transparent;
+    border: 1px solid transparent;
+  }
 
-            100% {
-                transform: translate(-3px,76px);
-                box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
-                text-shadow: 0 0 15px transparent, 0 0 20px transparent, 0 0 30px transparent, 0 0 40px transparent;
-                color: transparent;
-                border: 1px solid transparent;
-            }
-        }
-    /* END coins-animations */
-    
-    /* START lights-animations */
-        @keyframes light-animation {
-            0%
-            {
-                transform: rotate(0deg);
-            }
-            100%
-            {
-                transform: rotate(360deg);
-            }
-        }
-        
-        @keyframes light-blink {
-            0%{
-                text-shadow:0 0 15px #FFF, 0 0 20px yellow, 0 0 30px yellow, 0 0 40px #49FF18;
-            }
-            50%{
-                text-shadow:0 0 10px yellow, 0 0 0px yellow, 0 0 5px #49FF18;
-            }
-            100%{
-                text-shadow: 0 0 15px #FFF, 0 0 20px yellow, 0 0 30px yellow, 0 0 40px #49FF18;
-            }
-        }
-    /* END lights-animations */
+  50% {
+    transform: translate(2px, 150px);
+    position: absolute;
+    box-shadow: inset 0 0 2px yellow, 0 0 4px yellow;
+    text-shadow: 0 0 15px #fff, 0 0 20px yellow, 0 0 30px yellow,
+      0 0 40px #49ff18;
+    color: yellow;
+    border: 1px solid yellow;
+  }
 
-    /* START lever-animations */
-        @keyframes grab-animation {
-            0% {transform: translate(-5px,-115px);}
-            100% {transform: translate(-5px,-15px);}
-        }
+  100% {
+    transform: translate(2px, 150px);
+    box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
+    text-shadow: 0 0 15px transparent, 0 0 20px transparent,
+      0 0 30px transparent, 0 0 40px transparent;
+    color: transparent;
+    border: 1px solid transparent;
+  }
+}
 
-        @keyframes rod-animation {
-            0% {transform: translate(10px,-75px) rotateX(0turn);}
-            100% {transform: translate(10px,-75px) rotateX(0.26turn);}
-        }
-    /* END lever-animations */
+@keyframes coin8-animation {
+  0% {
+    transform: translate(2px, -5px);
+    box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
+    text-shadow: 0 0 15px transparent, 0 0 20px transparent,
+      0 0 30px transparent, 0 0 40px transparent;
+    color: transparent;
+    border: 1px solid transparent;
+  }
+
+  50% {
+    transform: translate(-103px, 44px);
+    position: absolute;
+    box-shadow: inset 0 0 2px yellow, 0 0 4px yellow;
+    text-shadow: 0 0 15px #fff, 0 0 20px yellow, 0 0 30px yellow,
+      0 0 40px #49ff18;
+    color: yellow;
+    border: 1px solid yellow;
+  }
+
+  100% {
+    transform: translate(-103px, 44px);
+    box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
+    text-shadow: 0 0 15px transparent, 0 0 20px transparent,
+      0 0 30px transparent, 0 0 40px transparent;
+    color: transparent;
+    border: 1px solid transparent;
+  }
+}
+
+@keyframes coin9-animation {
+  0% {
+    transform: translate(2px, -5px);
+    box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
+    text-shadow: 0 0 15px transparent, 0 0 20px transparent,
+      0 0 30px transparent, 0 0 40px transparent;
+    color: transparent;
+    border: 1px solid transparent;
+  }
+
+  50% {
+    transform: translate(2px, -70px);
+    position: absolute;
+    box-shadow: inset 0 0 2px yellow, 0 0 4px yellow;
+    text-shadow: 0 0 15px #fff, 0 0 20px yellow, 0 0 30px yellow,
+      0 0 40px #49ff18;
+    color: yellow;
+    border: 1px solid yellow;
+  }
+
+  100% {
+    transform: translate(2px, -70px);
+    box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
+    text-shadow: 0 0 15px transparent, 0 0 20px transparent,
+      0 0 30px transparent, 0 0 40px transparent;
+    color: transparent;
+    border: 1px solid transparent;
+  }
+}
+
+@keyframes coin10-animation {
+  0% {
+    transform: translate(2px, -5px);
+    box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
+    text-shadow: 0 0 15px transparent, 0 0 20px transparent,
+      0 0 30px transparent, 0 0 40px transparent;
+    color: transparent;
+    border: 1px solid transparent;
+  }
+
+  50% {
+    transform: translate(-3px, 76px);
+    position: absolute;
+    box-shadow: inset 0 0 2px yellow, 0 0 4px yellow;
+    text-shadow: 0 0 15px #fff, 0 0 20px yellow, 0 0 30px yellow,
+      0 0 40px #49ff18;
+    color: yellow;
+    border: 1px solid yellow;
+  }
+
+  100% {
+    transform: translate(-3px, 76px);
+    box-shadow: inset 0 0 2px transparent, 0 0 4px transparent;
+    text-shadow: 0 0 15px transparent, 0 0 20px transparent,
+      0 0 30px transparent, 0 0 40px transparent;
+    color: transparent;
+    border: 1px solid transparent;
+  }
+}
+/* END coins-animations */
+
+/* START lights-animations */
+@keyframes light-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes light-blink {
+  0% {
+    text-shadow: 0 0 15px #fff, 0 0 20px yellow, 0 0 30px yellow,
+      0 0 40px #49ff18;
+  }
+  50% {
+    text-shadow: 0 0 10px yellow, 0 0 0px yellow, 0 0 5px #49ff18;
+  }
+  100% {
+    text-shadow: 0 0 15px #fff, 0 0 20px yellow, 0 0 30px yellow,
+      0 0 40px #49ff18;
+  }
+}
+/* END lights-animations */
+
+/* START lever-animations */
+@keyframes grab-animation {
+  0% {
+    transform: translate(-5px, -115px);
+  }
+  100% {
+    transform: translate(-5px, -15px);
+  }
+}
+
+@keyframes rod-animation {
+  0% {
+    transform: translate(10px, -75px) rotateX(0turn);
+  }
+  100% {
+    transform: translate(10px, -75px) rotateX(0.26turn);
+  }
+}
+/* END lever-animations */
 /* END extras */
 
 /* START media queries */
-    @media only screen and (orientation: landscape) and (max-width:768px){    
-        /* START header */
-            .header{
-                display: none;
-            }
-        /* END header */
+@media only screen and (orientation: landscape) and (max-width: 768px) {
+  /* START header */
+  .header {
+    display: none;
+  }
+  /* END header */
 
-        /* START main */
-            .main{
-                height: 100vh;
-            }
+  /* START main */
+  .main {
+    height: 100vh;
+  }
 
-            .main__information{
-                display: none;
-            }
+  .main__information {
+    display: none;
+  }
 
-            .main_games{
-                display: block;
-                width: 100%;
-                height: 100%;
-            }
-            .title--text{
-                display: none;
-            }
-        /* END main */
+  .main_games {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .title--text {
+    display: none;
+  }
+  /* END main */
 
-        /* START footer */
-            .footer{
-                display: none;
-            }
-        /* END footer */
+  /* START footer */
+  .footer {
+    display: none;
+  }
+  /* END footer */
+}
+
+@media only screen and (min-height: 480px) {
+  /* START main */
+  .hunting-words--newspapper-game {
+    height: 92.5%;
+  }
+
+  .slot-machine--title {
+    font-size: 40px;
+  }
+
+  .slot-machine--outer-frame {
+    width: 440px;
+    height: 285px;
+  }
+
+  .slot-machine--lights {
+    width: 380px;
+    height: 220px;
+  }
+
+  .slot-machine--inner-frame {
+    width: 340px;
+    height: 165px;
+  }
+
+  .slot-machine--screen {
+    height: 90%;
+  }
+
+  .slot-machine--screen-slot {
+    width: 80px;
+    height: 80px;
+  }
+
+  .slot-machine--coupling {
+    transform: translate(257px, 0);
+    width: 65px;
+    height: 90px;
+  }
+
+  .slot-machine--lever-rod {
+    transform: translate(13px, -93px);
+    width: 30px;
+    height: 130px;
+  }
+
+  .slot-machine--lever-grab {
+    transform: translate(-5px, -135px);
+    width: 75px;
+    height: 75px;
+  }
+  /* END main */
+
+  /* START extras */
+  /* START lever-animations */
+  @keyframes grab-animation {
+    0% {
+      transform: translate(-5px, -135px);
     }
-
-    @media only screen and (min-height: 480px){
-        /* START main */
-            .hunting-words--newspapper-game{
-                height: 92.5%;
-            }
-
-            .slot-machine--title{
-                font-size: 40px; 
-            }
-
-            .slot-machine--outer-frame{
-                width: 440px;
-                height: 285px;
-            }
-            
-            .slot-machine--lights{
-                width: 380px;
-                height: 220px;
-            }
-
-            .slot-machine--inner-frame{
-                width: 340px;
-                height: 165px;
-            }
-
-            .slot-machine--screen{
-                height: 90%;
-            }
-
-            .slot-machine--screen-slot{
-                width: 80px;
-                height: 80px;
-            }
-
-            .slot-machine--coupling{
-                transform: translate(257px,0);
-                width: 65px;
-                height: 90px;
-            }
-
-            .slot-machine--lever-rod{
-                transform: translate(13px,-93px);
-                width: 30px;
-                height: 130px;
-            }
-            
-            .slot-machine--lever-grab{
-                transform: translate(-5px,-135px);
-                width: 75px;
-                height: 75px;
-            }
-        /* END main */
-
-        /* START extras */
-            /* START lever-animations */
-                @keyframes grab-animation {
-                    0% {transform: translate(-5px,-135px);}
-                    100% {transform: translate(-5px,0px);}
-                }
-
-                @keyframes rod-animation {
-                    0% {transform: translate(13px,-93px) rotateX(0turn);}
-                    100% {transform: translate(13px,-93px) rotateX(0.26turn);}
-                }
-            /* END lever-animations */
-        /* END extras */
+    100% {
+      transform: translate(-5px, 0px);
     }
+  }
 
-    @media only screen and (min-width: 768px){
-        /* START main */
-            .main{
-                height: 100%;
-            }
-
-            .information--mobile{
-                display: none;
-            }
-
-            .main_games{
-                display: block;
-                height: 600px;
-            }
-
-            .game--words{
-                width: 30%;
-            }
-
-            .column--words {
-                font-size: 16.5px;
-            }
-
-            table{
-                padding-top: 5px;
-            }
-        
-            tr{
-                font-size: 20px;    
-            }
-
-            .letter--blur{
-                font-weight: bold;
-                text-decoration: underline;
-            }
-        
-            li{
-                font-size: 20px;      
-            }
-
-            .slot-machine--title{
-                font-size: 60px;
-            }
-
-            .slot-machine--outer-frame{
-                width: 700px;
-                height: 380px;
-            }
-            
-            .slot-machine--lights{
-                width: 625px;
-                height: 300px;
-            }
-
-            .slot-machine--inner-frame{
-                width: 565px;
-                height: 230px;
-            }
-
-            .slot-machine--screen-slot{
-                width: 150px;
-                height: 150px;
-            }
-
-            .slot-machine--coupling{
-                transform: translate(402px,0);
-                width: 95px;
-                height: 115px;
-            }
-
-            .slot-machine--lever-rod{
-                transform: translate(25px,-125px);
-                width: 35px;
-                height: 175px;
-            }
-            
-            .slot-machine--lever-grab{
-                transform: translate(0px,-180px);
-                width: 90px;
-                height: 90px;
-            }
-            .slot-machine--lights::before{
-                height: 235px;
-            }
-        /* END main */
-
-        /* START footer */
-            .footer{
-               margin-top: 50px; 
-            }
-        /* END footer */
-
-        /* START extras */
-            /* START lever-animations */
-                @keyframes grab-animation {
-                    0% {transform: translate(0px,-180px);}
-                    100% {transform: translate(0px,5px);}
-                }
-
-                @keyframes rod-animation {
-                    0% {transform: translate(25px,-125px) rotateX(0turn);}
-                    100% {transform: translate(25px,-125px) rotateX(0.26turn);}
-                }
-            /* END lever-animations */
-        /* END extras */
+  @keyframes rod-animation {
+    0% {
+      transform: translate(13px, -93px) rotateX(0turn);
     }
-
-    @media only screen and (min-width: 1024px){ 
-        /* START main */
-            .main_games{
-                height: 650px;
-            }
-            
-            .column--words {
-                font-size: 22.5px;
-            }
-
-            table{
-                display: flex;
-                justify-content: center;
-                padding-top: 25px;
-            }
-        
-            tr{
-                display: flex;
-                justify-content: space-around;
-                font-family: "Architects Daughter";
-                font-size: 25px;
-                width: 50vw;
-                height: 4.2vh;
-            }
-            
-            td{
-                cursor: pointer;
-            }
-
-            .letter--blur{
-                font-weight: bold;
-                text-decoration: underline;
-                opacity: 50%;
-            }
-        
-            li{
-                font-family: "Architects Daughter";
-                font-size: 24px;      
-            }
-
-            .slot-machine--dispenser{
-                transform: translate(-390px,0px);
-            }
-
-            .slot-machine--lever-grab{
-                cursor: pointer;
-            }
-        /* END main */
-
-        /* START footer */
-            .footer{
-               margin-top: 50px; 
-            }
-        /* END footer */
-
-        /* START extras */
-            /* START lever-animations */
-                @keyframes grab-animation {
-                    0% {transform: translate(0px,-180px);}
-                    100% {transform: translate(0px,5px);}
-                }
-
-                @keyframes rod-animation {
-                    0% {transform: translate(25px,-125px) rotateX(0turn);}
-                    100% {transform: translate(25px,-125px) rotateX(0.26turn);}
-                }
-            /* END lever-animations */
-        /* END extras */
+    100% {
+      transform: translate(13px, -93px) rotateX(0.26turn);
     }
+  }
+  /* END lever-animations */
+  /* END extras */
+}
+
+@media only screen and (min-width: 768px) {
+  /* START main */
+  .main {
+    height: 100%;
+  }
+
+  .information--mobile {
+    display: none;
+  }
+
+  .main_games {
+    display: block;
+    height: 600px;
+  }
+
+  .game--words {
+    width: 30%;
+  }
+
+  .column--words {
+    font-size: 16.5px;
+  }
+
+  table {
+    padding-top: 5px;
+  }
+
+  tr {
+    font-size: 20px;
+  }
+
+  .letter--blur {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  li {
+    font-size: 20px;
+  }
+
+  .slot-machine--title {
+    font-size: 60px;
+  }
+
+  .slot-machine--outer-frame {
+    width: 700px;
+    height: 380px;
+  }
+
+  .slot-machine--lights {
+    width: 625px;
+    height: 300px;
+  }
+
+  .slot-machine--inner-frame {
+    width: 565px;
+    height: 230px;
+  }
+
+  .slot-machine--screen-slot {
+    width: 150px;
+    height: 150px;
+  }
+
+  .slot-machine--coupling {
+    transform: translate(402px, 0);
+    width: 95px;
+    height: 115px;
+  }
+
+  .slot-machine--lever-rod {
+    transform: translate(25px, -125px);
+    width: 35px;
+    height: 175px;
+  }
+
+  .slot-machine--lever-grab {
+    transform: translate(0px, -180px);
+    width: 90px;
+    height: 90px;
+  }
+  .slot-machine--lights::before {
+    height: 235px;
+  }
+  /* END main */
+
+  /* START footer */
+  .footer {
+    margin-top: 50px;
+  }
+  /* END footer */
+
+  /* START extras */
+  /* START lever-animations */
+  @keyframes grab-animation {
+    0% {
+      transform: translate(0px, -180px);
+    }
+    100% {
+      transform: translate(0px, 5px);
+    }
+  }
+
+  @keyframes rod-animation {
+    0% {
+      transform: translate(25px, -125px) rotateX(0turn);
+    }
+    100% {
+      transform: translate(25px, -125px) rotateX(0.26turn);
+    }
+  }
+  /* END lever-animations */
+  /* END extras */
+}
+
+@media only screen and (min-width: 1024px) {
+  /* START main */
+  .main_games {
+    height: 650px;
+  }
+
+  .column--words {
+    font-size: 22.5px;
+  }
+
+  table {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+  }
+
+  tr {
+    display: flex;
+    justify-content: space-around;
+    font-family: "Architects Daughter";
+    font-size: 25px;
+    width: 50vw;
+    height: 4.2vh;
+  }
+
+  td {
+    cursor: pointer;
+  }
+
+  .letter--blur {
+    font-weight: bold;
+    text-decoration: underline;
+    opacity: 50%;
+  }
+
+  li {
+    font-family: "Architects Daughter";
+    font-size: 24px;
+  }
+
+  .slot-machine--dispenser {
+    transform: translate(-390px, 0px);
+  }
+
+  .slot-machine--lever-grab {
+    cursor: pointer;
+  }
+  /* END main */
+
+  /* START footer */
+  .footer {
+    margin-top: 50px;
+  }
+  /* END footer */
+
+  /* START extras */
+  /* START lever-animations */
+  @keyframes grab-animation {
+    0% {
+      transform: translate(0px, -180px);
+    }
+    100% {
+      transform: translate(0px, 5px);
+    }
+  }
+
+  @keyframes rod-animation {
+    0% {
+      transform: translate(25px, -125px) rotateX(0turn);
+    }
+    100% {
+      transform: translate(25px, -125px) rotateX(0.26turn);
+    }
+  }
+  /* END lever-animations */
+  /* END extras */
+}
 /* END media queries */
